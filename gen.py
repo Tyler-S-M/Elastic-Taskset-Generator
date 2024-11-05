@@ -10,16 +10,13 @@ MAX_ALLOWED_CPUS = 16
 MIN_ALLOWED_CPUS = 2
 
 def generate_discrete_modes(min_val, max_val, mode_ratio):
-    """Generate discrete modes between min and max values based on mode ratio"""
+
     num_modes = round(1 / mode_ratio)
     step = (max_val - min_val) / (num_modes - 1)
     return [min_val + i * step for i in range(num_modes)]
 
 def calculate_cpus(work, span, period, skewness_ratio):
-    """
-    Calculate CPUs using the formula for skewed systems.
-    Returns None if calculation would result in negative value.
-    """
+
     adjusted_period = period if skewness_ratio == 1.0 else period / 2
 
     try:
@@ -37,18 +34,35 @@ def calculate_cpus(work, span, period, skewness_ratio):
     except (ValueError, ZeroDivisionError):
         return None
 
-def is_valid_cpus(cpus_a, cpus_b):
-    """
-    Validate CPU requirements against system constraints and negative values
-    """
-    if cpus_a is None or cpus_b is None:
-        return False
+def is_valid_cpus(cpus_a, cpus_b, skewness_ratio):
+
+    if skewness_ratio != 1.0:
+
+        if (cpus_a is None or cpus_b is None):
+            return False
+
+        if (cpus_a > TOTAL_CPUS_A or cpus_b > TOTAL_CPUS_B):
+            return False
+
+        if ((cpus_a + cpus_b) > MAX_ALLOWED_CPUS):
+            return False
+
+        if (cpus_a < MIN_ALLOWED_CPUS) or (cpus_b < MIN_ALLOWED_CPUS):
+            return False
         
-    if cpus_a < 0 or cpus_b < 0:
-        return False
-        
-    if cpus_a > TOTAL_CPUS_A or cpus_b > TOTAL_CPUS_B:
-        return False
+    else:
+
+        if (cpus_a is None):
+            return False
+
+        if (cpus_a > TOTAL_CPUS_A):
+            return False
+
+        if (cpus_a > MAX_ALLOWED_CPUS):
+            return False
+
+        if (cpus_a < MIN_ALLOWED_CPUS):
+            return False
         
     return True
 
@@ -124,12 +138,8 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None):
     max_cpus_b = calculate_cpus(max_work_b, span_b, period, skewness_ratio)
     
     # Validate all CPU calculations and system constraints
-    if not all([is_valid_cpus(min_cpus_a, min_cpus_b),
-                is_valid_cpus(max_cpus_a, max_cpus_b)]):
-        return None
-    
-    # Check if task meets minimum CPU requirements
-    if min_cpus_a < MIN_ALLOWED_CPUS or min_cpus_b < MIN_ALLOWED_CPUS or (max_cpus_a + max_cpus_b) < MAX_ALLOWED_CPUS:
+    if not all([is_valid_cpus(min_cpus_a, min_cpus_b, skewness_ratio),
+                is_valid_cpus(max_cpus_a, max_cpus_b, skewness_ratio)]):
         return None
     
     # Generate modes and validate their CPU requirements
@@ -141,10 +151,6 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None):
     for mode_a, mode_b in zip(modes_a, modes_b):
         cpus_a = calculate_cpus(mode_a, span_a, period, skewness_ratio)
         cpus_b = calculate_cpus(mode_b, span_b, period, skewness_ratio)
-        
-        # Skip invalid modes (this will cause the task to be discarded)
-        if not is_valid_cpus(cpus_a, cpus_b):
-            return None
             
         mode_info.append({
             'period': period,
