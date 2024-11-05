@@ -9,6 +9,8 @@ TOTAL_CPUS_B = 32  # Total type B CPUs available in system
 MAX_ALLOWED_CPUS = 16
 MIN_ALLOWED_CPUS = 2
 
+iso = False
+
 def generate_discrete_modes(min_val, max_val, mode_ratio):
 
     num_modes = round(1 / mode_ratio)
@@ -161,6 +163,12 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None):
             'cpus_a': cpus_a,
             'cpus_b': cpus_b
         })
+
+    # For skewness ratio of 1.0, create isofunctional modes
+    if skewness_ratio == 1.0 and iso == True:
+        mode_info = create_isofunctional_modes(mode_info, span_a)
+        # Update span_b to match span_a for isofunctional modes
+        span_b = span_a
     
     return {
         'span_a': span_a,
@@ -180,7 +188,92 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None):
         'segments': list(zip(segments, segment_strands, segment_types))
     }
 
-def generate_task_set(num_tasks, mode_ratio=0.25, skewness_ratio=None):
+def print_yaml_format(task_num, task):
+    # Convert milliseconds to nanoseconds for the YAML output
+    ms_to_ns = 1_000_000
+    
+    print(f"task: {task_num}\n elasticity: {task['elasticity']:.3f}")
+    print("    modes:")
+    
+    for mode in task['mode_info']:
+        # Convert all times from ms to ns and ensure they're integers
+        work_ns = int(mode['work_a'] * ms_to_ns)
+        gpu_work_ns = int(mode['work_b'] * ms_to_ns)
+
+        span_ns = 0
+        gpu_span_ns = 0
+
+        if work_ns != 0:
+            span_ns = int(task['span_a'] * ms_to_ns)
+        
+        if gpu_work_ns != 0:
+            gpu_span_ns = int(task['span_b'] * ms_to_ns)
+            
+        period_ns = int(task['period'] * ms_to_ns)
+        
+        print(f"      - work: {{sec: 0, nsec: {work_ns}}}")
+        print(f"        span: {{sec: 0, nsec: {span_ns}}}")
+        print(f"        gpu_work: {{sec: 0, nsec: {gpu_work_ns}}}")
+        print(f"        gpu_span: {{sec: 0, nsec: {gpu_span_ns}}}")
+        print(f"        period: {{sec: 0, nsec: {period_ns}}}")
+
+def write_yaml_format(task_num, task, file):
+    # Convert milliseconds to nanoseconds for the YAML output
+    ms_to_ns = 1_000_000
+    
+    file.write(f"task: {task_num}\n elasticity: {task['elasticity']:.3f}\n")
+    file.write("    modes:\n")
+    
+    for mode in task['mode_info']:
+        # Convert all times from ms to ns and ensure they're integers
+        work_ns = int(mode['work_a'] * ms_to_ns)
+        gpu_work_ns = int(mode['work_b'] * ms_to_ns)
+
+        span_ns = 0
+        gpu_span_ns = 0
+
+        if work_ns != 0:
+            span_ns = int(task['span_a'] * ms_to_ns)
+        
+        if gpu_work_ns != 0:
+            gpu_span_ns = int(task['span_b'] * ms_to_ns)
+            
+        period_ns = int(task['period'] * ms_to_ns)
+        
+        file.write(f"      - work: {{sec: 0, nsec: {work_ns}}}\n")
+        file.write(f"        span: {{sec: 0, nsec: {span_ns}}}\n")
+        file.write(f"        gpu_work: {{sec: 0, nsec: {gpu_work_ns}}}\n")
+        file.write(f"        gpu_span: {{sec: 0, nsec: {gpu_span_ns}}}\n")
+        file.write(f"        period: {{sec: 0, nsec: {period_ns}}}\n")
+    
+    file.write("\n")  # Add blank line between tasks
+
+def create_isofunctional_modes(original_modes, span_a):
+    mirrored_modes = []
+    for mode in original_modes:
+        # Original mode with work on core A
+        mirrored_modes.append({
+            'period': mode['period'],
+            'total_work': mode['work_a'],
+            'work_a': mode['work_a'],
+            'work_b': 0,
+            'total_cpus': mode['cpus_a'],
+            'cpus_a': mode['cpus_a'],
+            'cpus_b': 0
+        })
+        # Mirrored mode with work on core B
+        mirrored_modes.append({
+            'period': mode['period'],
+            'total_work': mode['work_a'],  # Same total work
+            'work_a': 0,
+            'work_b': mode['work_a'],  # Move work to core B
+            'total_cpus': mode['cpus_a'],  # Same total CPUs
+            'cpus_a': 0,
+            'cpus_b': mode['cpus_a']  # Move CPUs to core B
+        })
+    return mirrored_modes
+
+def generate_task_set(num_tasks, mode_ratio=0.25, skewness_ratio=None, filename=None):
     tasks = []
     task_num = 1
     attempts = 0
@@ -235,11 +328,40 @@ def generate_task_set(num_tasks, mode_ratio=0.25, skewness_ratio=None):
     
     if attempts >= max_attempts:
         print("\nWarning: Reached maximum attempts to generate valid tasks. Some tasks may be missing.")
+
+    # Add the new YAML-style output
+
+    if filename:
+        print("\n=== YAML Format Output To File ===")
+    
+    else:
+        print("\n=== YAML Format Output ===")
+
+    yaml_file_handle = open(filename, 'w') if filename else None
+    for idx, task in enumerate(tasks, 1):
+
+        if filename == None:
+            print_yaml_format(idx, task)
+            print()
+        
+        else:
+            write_yaml_format(idx, task, yaml_file_handle)
     
     return tasks
 
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
-        tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]))
+
+    skew = float(sys.argv[3])
+
+    if skew == -1:
+        skew = None
+
+    if skew == 0:
+        skew = 1.0
+        iso = True
+    
+
+    if len(sys.argv) == 4:
+        tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]), skew)
     else:
-        tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3]))
+        tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]), skew, sys.argv[4])
