@@ -1,8 +1,18 @@
-Simple Generator Script for Making Synthetic Elastic Tasksets
+# Simple Generator Script for Making Synthetic Elastic Tasksets
 
-Usage: python gen.py <num_tasks> <discrete_ratio> <skewness_ratio> <(optional) Yaml File Name>
+## Overview
+A Python script for generating synthetic elastic tasksets with configurable parameters for testing and simulation purposes.
 
-num_tasks = number of tasks to generate
-discrete_ratio = stepping at which to turn continuous elasticity into discrete modes
-skewness_ratio = how much of the dag should be attributed to core A vs core B
-Yaml File Name = if provided, what file to output YAML to for use with scheduler
+## Usage
+```bash
+python gen.py <num_tasks> <discrete_ratio> <skewness_ratio> [yaml_file]
+```
+
+## Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `num_tasks` | Number of tasks to generate |
+| `discrete_ratio` | Stepping ratio for converting continuous elasticity into discrete modes |
+| `skewness_ratio` | Ratio determining workload distribution between core A and core B |
+| `yaml_file` | *(Optional)* Output file name for YAML format compatible with scheduler |
