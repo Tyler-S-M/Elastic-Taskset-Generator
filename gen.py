@@ -349,19 +349,200 @@ def generate_task_set(num_tasks, mode_ratio=0.25, skewness_ratio=None, filename=
     
     return tasks
 
-if __name__ == "__main__":
-
-    skew = float(sys.argv[3])
-
-    if skew == -1:
-        skew = None
-
-    if skew == 0:
-        skew = 1.0
-        iso = True
+def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25):
+    """
+    Generate a set of tasks where some are isofunctional and their CPU requirements 
+    sum to system totals.
     
+    Args:
+        total_tasks (int): Total number of tasks to generate
+        iso_tasks (int): Number of isofunctional tasks within the total
+        mode_ratio (float): Ratio for mode generation
+        
+    Returns:
+        list: List of generated tasks
+    """
+    if iso_tasks > total_tasks:
+        raise ValueError("Number of isofunctional tasks cannot exceed total tasks")
+    
+    tasks = []
+    remaining_cpus_a = TOTAL_CPUS_A
+    remaining_cpus_b = TOTAL_CPUS_B
+    
+    print(f"\nGenerating {total_tasks} tasks ({iso_tasks} isofunctional)")
+    print(f"Target: Total CPUs Type A: {TOTAL_CPUS_A}, Type B: {TOTAL_CPUS_B}\n")
+    
+    # Generate isofunctional tasks first
+    for i in range(iso_tasks):
+        while True:
+            # Calculate target CPUs for this task (distribute remaining evenly)
+            target_cpus = max(
+                MIN_ALLOWED_CPUS,
+                min(
+                    remaining_cpus_a // (iso_tasks - i),
+                    MAX_ALLOWED_CPUS // 2  # Ensure room for both A and B
+                )
+            )
+            
+            task = generate_task(mode_ratio, skewness_ratio=1.0)
+            if task is None:
+                continue
+                
+            # Check if any mode uses approximately the target CPUs
+            valid_modes = False
+            for mode in task['mode_info']:
+                if (abs(mode['cpus_a'] - target_cpus) <= 1 or 
+                    abs(mode['cpus_b'] - target_cpus) <= 1):
+                    valid_modes = True
+                    break
+            
+            if valid_modes:
+                print(f"\n=== Isofunctional Task {i+1} ===")
+                print_detailed_task_info(task)
+                tasks.append(task)
+                remaining_cpus_a -= target_cpus
+                remaining_cpus_b -= target_cpus
+                break
+    
+    # Generate regular tasks
+    for i in range(total_tasks - iso_tasks):
+        while True:
+            target_cpus_a = max(
+                MIN_ALLOWED_CPUS,
+                min(
+                    remaining_cpus_a // (total_tasks - iso_tasks - i),
+                    MAX_ALLOWED_CPUS // 2
+                )
+            )
+            target_cpus_b = max(
+                MIN_ALLOWED_CPUS,
+                min(
+                    remaining_cpus_b // (total_tasks - iso_tasks - i),
+                    MAX_ALLOWED_CPUS // 2
+                )
+            )
+            
+            # Generate with random skewness
+            task = generate_task(mode_ratio, skewness_ratio=np.random.uniform(0.2, 0.8))
+            if task is None:
+                continue
+            
+            # Check if any mode uses approximately the target CPUs
+            valid_modes = False
+            for mode in task['mode_info']:
+                if (abs(mode['cpus_a'] - target_cpus_a) <= 1 and 
+                    abs(mode['cpus_b'] - target_cpus_b) <= 1):
+                    valid_modes = True
+                    break
+            
+            if valid_modes:
+                print(f"\n=== Regular Task {iso_tasks + i + 1} ===")
+                print_detailed_task_info(task)
+                tasks.append(task)
+                remaining_cpus_a -= target_cpus_a
+                remaining_cpus_b -= target_cpus_b
+                break
+    
+    return tasks
 
-    if len(sys.argv) == 4:
-        tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]), skew)
+def print_detailed_task_info(task):
+    """Print detailed information about a task"""
+    print(f"Skewness Ratio: {task['skewness_ratio']:.2f}")
+    print(f"Span A: {task['span_a']:.2f}ms")
+    print(f"Span B: {task['span_b']:.2f}ms")
+    print(f"Period: {task['period']:.2f}ms")
+    
+    print("\nWork Type A:")
+    print(f"  Min Work: {task['min_work_a']:.2f}ms")
+    print(f"  Max Work: {task['max_work_a']:.2f}ms")
+    print(f"  Min CPUs: {task['min_cpus_a']}")
+    print(f"  Max CPUs: {task['max_cpus_a']}")
+    
+    print("\nWork Type B:")
+    print(f"  Min Work: {task['min_work_b']:.2f}ms")
+    print(f"  Max Work: {task['max_work_b']:.2f}ms")
+    print(f"  Min CPUs: {task['min_cpus_b']}")
+    print(f"  Max CPUs: {task['max_cpus_b']}")
+    
+    print(f"\nElasticity: {task['elasticity']:.3f}")
+    
+    print("\nSegments (length, (min_strands, max_strands), type):")
+    for idx, (length, strands, type_) in enumerate(task['segments'], 1):
+        print(f"  Segment {idx}: {length:.2f}ms, {strands}, Type {type_}")
+    
+    print("\nModes:")
+    for idx, mode in enumerate(task['mode_info'], 1):
+        print(f"  Mode {idx}:")
+        print(f"    Period: {mode['period']:.2f}ms")
+        print(f"    Total Work: {mode['total_work']:.2f}ms")
+        print(f"    Work Type A: {mode['work_a']:.2f}ms")
+        print(f"    Work Type B: {mode['work_b']:.2f}ms")
+        print(f"    Total CPUs: {mode['total_cpus']}")
+        print(f"    CPUs Type A: {mode['cpus_a']}")
+        print(f"    CPUs Type B: {mode['cpus_b']}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python3 script.py [num_tasks] [mode_ratio] [skewness_ratio] [output_file]")
+        print("   or: python3 script.py set [total_tasks] [iso_tasks] [iso_mirror = true]")
+        sys.exit(1)
+        
+    if sys.argv[1] == "set":
+        if len(sys.argv) < 4:
+            print("Usage: python3 script.py set [total_tasks] [iso_tasks] [iso_mirror = true]")
+            sys.exit(1)
+            
+        total_tasks = int(sys.argv[2])
+        iso_tasks = int(sys.argv[3])
+        
+        try:
+            filename = None
+            if len(sys.argv) == 5:
+                filename = sys.argv[4]
+            
+            if len(sys.argv) == 6:
+                sio = False
+            else:
+                iso = True
+
+            tasks = generate_task_set_with_iso(total_tasks, iso_tasks)
+
+            if filename:
+                print("\n=== YAML Format Output To File ===")
+            
+            else:
+                print("\n=== YAML Format Output ===")
+
+            yaml_file_handle = open(filename, 'w') if filename else None
+            for idx, task in enumerate(tasks, 1):
+
+                if filename == None:
+                    print_yaml_format(idx, task)
+                    print()
+                
+                else:
+                    write_yaml_format(idx, task, yaml_file_handle)
+            
+            # Print final CPU allocation summary
+            total_cpus_a = sum(max(mode['cpus_a'] for mode in task['mode_info']) for task in tasks)
+            total_cpus_b = sum(max(mode['cpus_b'] for mode in task['mode_info']) for task in tasks)
+            print(f"\nFinal CPU Allocation:")
+            print(f"Total CPUs Type A used: {total_cpus_a}/{TOTAL_CPUS_A}")
+            print(f"Total CPUs Type B used: {total_cpus_b}/{TOTAL_CPUS_B}")
+            
+        except ValueError as e:
+            print(f"Error: {e}")
+            sys.exit(1)
     else:
-        tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]), skew, sys.argv[4])
+        # Original command-line handling
+        skew = float(sys.argv[3])
+        if skew == -1:
+            skew = None
+        if skew == 0:
+            skew = 1.0
+            iso = True
+        
+        if len(sys.argv) == 4:
+            tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]), skew)
+        else:
+            tasks = generate_task_set(int(sys.argv[1]), float(sys.argv[2]), skew, sys.argv[4])
