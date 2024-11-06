@@ -7,7 +7,7 @@ A Python script for generating synthetic elastic tasksets with configurable para
 ```bash
 python gen.py <num_tasks> <discrete_ratio> <skewness_ratio> [yaml_file]
 OR
-python gen.py set <num_tasks> <num_iso_tasks> <iso_homogeneous> [yaml_file]
+python gen.py set <num_tasks> <num_iso_tasks> <num_likely_unsafe_combined_elasticity_tasks> <iso_homogeneous> [yaml_file]
 ```
 
 ## Parameters
@@ -20,3 +20,4 @@ python gen.py set <num_tasks> <num_iso_tasks> <iso_homogeneous> [yaml_file]
 | `yaml_file` | *(Optional)* Output file name for YAML format compatible with scheduler |
 | `num_iso_tasks` | number of tasks to have be isofunctional in the resulting task set |
 | `iso_homogeneous` | *(Optional)* Generates isofunctional tasks but doesn't allow them to use either pocessor type |
+| `num_likely_unsafe_combined_elasticity_tasks` | number of tasks to generate with combinational elasticity that are likely to be dangerous |
