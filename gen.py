@@ -17,6 +17,12 @@ def generate_discrete_modes(min_val, max_val, mode_ratio):
     step = (max_val - min_val) / (num_modes - 1)
     return [min_val + i * step for i in range(num_modes)]
 
+def generate_discrete_periods(min_val, max_val, mode_ratio):
+
+    num_modes = round(1 / mode_ratio)
+    step = (max_val - min_val) / (num_modes - 1)
+    return [min_val + i * step for i in range(num_modes)]
+
 def calculate_cpus(work, span, period, skewness_ratio):
 
     adjusted_period = period if skewness_ratio == 1.0 else period / 2
@@ -68,7 +74,7 @@ def is_valid_cpus(cpus_a, cpus_b, skewness_ratio):
         
     return True
 
-def generate_task(mode_ratio=0.25, skewness_ratio=None):
+def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=False):
     # Constants
     pmax = 1 / (2 * (2 + math.sqrt(2)))
     
@@ -126,18 +132,29 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None):
                     in zip(segments, segment_strands, segment_types) if type_ == 'b')
     max_work_b = sum(length * strands[1] for length, strands, type_ 
                     in zip(segments, segment_strands, segment_types) if type_ == 'b')
+
+    #if we want tasks which will be unsafe for evaluation
+    if combined_elasticity:
+        if np.random.uniform(0, 1) > 0.5:
+            max_work_b = min_work_b
+        else:
+            max_work_a = min_work_a
     
     # Generate period uniformly between 50ms and 1s
+    period_low = np.random.uniform(50, 1000)
     period = np.random.uniform(50, 1000)
+
+    if period_low > period:
+        period_low, period = period, period_low
     
     # Generate elasticity value
     elasticity = np.random.uniform(0, 1)
     
     # Calculate minimum and maximum CPUs needed for both types
     min_cpus_a = calculate_cpus(min_work_a, span_a, period, skewness_ratio)
-    max_cpus_a = calculate_cpus(max_work_a, span_a, period, skewness_ratio)
+    max_cpus_a = calculate_cpus(max_work_a, span_a, period_low if combined_elasticity else period, skewness_ratio)
     min_cpus_b = calculate_cpus(min_work_b, span_b, period, skewness_ratio)
-    max_cpus_b = calculate_cpus(max_work_b, span_b, period, skewness_ratio)
+    max_cpus_b = calculate_cpus(max_work_b, span_b, period_low if combined_elasticity else period, skewness_ratio)
     
     # Validate all CPU calculations and system constraints
     if not all([is_valid_cpus(min_cpus_a, min_cpus_b, skewness_ratio),
@@ -149,13 +166,21 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None):
     modes_b = generate_discrete_modes(min_work_b, max_work_b, mode_ratio)
     
     # Create combined mode information
+    period_real = []
+
+    if combined_elasticity:
+        period_real = generate_discrete_periods(period_low, period, mode_ratio)
+
     mode_info = []
     for mode_a, mode_b in zip(modes_a, modes_b):
-        cpus_a = calculate_cpus(mode_a, span_a, period, skewness_ratio)
-        cpus_b = calculate_cpus(mode_b, span_b, period, skewness_ratio)
+
+        period_current = period if not combined_elasticity else period_real[len(mode_info)]
+
+        cpus_a = calculate_cpus(mode_a, span_a, period_current, skewness_ratio)
+        cpus_b = calculate_cpus(mode_b, span_b, period_current, skewness_ratio)
             
         mode_info.append({
-            'period': period,
+            'period': period_current,
             'total_work': mode_a + mode_b,
             'work_a': mode_a,
             'work_b': mode_b,
@@ -169,6 +194,16 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None):
         mode_info = create_isofunctional_modes(mode_info, span_a)
         # Update span_b to match span_a for isofunctional modes
         span_b = span_a
+
+    #if we want tasks which will be unsafe for evaluation
+    returning = False
+    for mode in mode_info:
+        for mode2 in mode_info:
+            if (mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b']):
+                returning = True
+    
+    if combined_elasticity and not returning:
+        return None
     
     return {
         'span_a': span_a,
@@ -209,7 +244,7 @@ def print_yaml_format(task_num, task):
         if gpu_work_ns != 0:
             gpu_span_ns = int(task['span_b'] * ms_to_ns)
             
-        period_ns = int(task['period'] * ms_to_ns)
+        period_ns = int(mode['period'] * ms_to_ns)
         
         print(f"      - work: {{sec: 0, nsec: {work_ns}}}")
         print(f"        span: {{sec: 0, nsec: {span_ns}}}")
@@ -238,7 +273,7 @@ def write_yaml_format(task_num, task, file):
         if gpu_work_ns != 0:
             gpu_span_ns = int(task['span_b'] * ms_to_ns)
             
-        period_ns = int(task['period'] * ms_to_ns)
+        period_ns = int(mode['period'] * ms_to_ns)
         
         file.write(f"      - work: {{sec: 0, nsec: {work_ns}}}\n")
         file.write(f"        span: {{sec: 0, nsec: {span_ns}}}\n")
@@ -349,7 +384,7 @@ def generate_task_set(num_tasks, mode_ratio=0.25, skewness_ratio=None, filename=
     
     return tasks
 
-def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25):
+def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined_elasticity=False, count=0):
     """
     Generate a set of tasks where some are isofunctional and their CPU requirements 
     sum to system totals.
@@ -423,7 +458,12 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25):
             )
             
             # Generate with random skewness
-            task = generate_task(mode_ratio, skewness_ratio=np.random.uniform(0.2, 0.8))
+            combined = False
+            if combined_elasticity and i < count:
+                combined = True
+
+            task = generate_task(mode_ratio, np.random.uniform(0.2, 0.8), combined)
+
             if task is None:
                 continue
             
@@ -484,28 +524,29 @@ def print_detailed_task_info(task):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python3 script.py [num_tasks] [mode_ratio] [skewness_ratio] [output_file]")
-        print("   or: python3 script.py set [total_tasks] [iso_tasks] [iso_mirror = true]")
+        print("   or: python3 script.py set [total_tasks] [iso_tasks] [likely_unsafe_combined_elasticity_tasks] [iso_mirror = true]")
         sys.exit(1)
         
     if sys.argv[1] == "set":
         if len(sys.argv) < 4:
-            print("Usage: python3 script.py set [total_tasks] [iso_tasks] [iso_mirror = true]")
+            print("Usage: python3 script.py set [total_tasks] [iso_tasks] [likely_unsafe_combined_elasticity_tasks] [iso_mirror = true]")
             sys.exit(1)
             
         total_tasks = int(sys.argv[2])
         iso_tasks = int(sys.argv[3])
+        likely_unsafe_combined_elasticity_tasks = int(sys.argv[4])
         
         try:
             filename = None
-            if len(sys.argv) == 5:
-                filename = sys.argv[4]
+            if len(sys.argv) >= 5:
+                filename = sys.argv[5]
             
-            if len(sys.argv) == 6:
-                sio = False
+            if len(sys.argv) == 7:
+                iso = False
             else:
                 iso = True
 
-            tasks = generate_task_set_with_iso(total_tasks, iso_tasks)
+            tasks = generate_task_set_with_iso(total_tasks, iso_tasks, 0.25, likely_unsafe_combined_elasticity_tasks > 0, likely_unsafe_combined_elasticity_tasks)
 
             if filename:
                 print("\n=== YAML Format Output To File ===")
