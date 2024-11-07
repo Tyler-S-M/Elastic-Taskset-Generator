@@ -3,10 +3,10 @@ import math
 import sys
 
 # Global system CPU constraints
-TOTAL_CPUS_A = 16  # Total type A CPUs available in system
-TOTAL_CPUS_B = 32  # Total type B CPUs available in system
+TOTAL_CPUS_A = 128  # Total type A CPUs available in system
+TOTAL_CPUS_B = 80  # Total type B CPUs available in system
 
-MAX_ALLOWED_CPUS = 16
+MAX_ALLOWED_CPUS = 32
 MIN_ALLOWED_CPUS = 2
 
 iso = False
@@ -255,8 +255,9 @@ def print_yaml_format(task_num, task):
 def write_yaml_format(task_num, task, file):
     # Convert milliseconds to nanoseconds for the YAML output
     ms_to_ns = 1_000_000
-    
-    file.write(f"task: {task_num}\n elasticity: {task['elasticity']:.3f}\n")
+
+    file.write("  - program:\n      name: prog\n      args: \"0\"\n    elasticity: ")
+    file.write("{}\n".format(int(np.ceil(1/task['elasticity']))))
     file.write("    modes:\n")
     
     for mode in task['mode_info']:
@@ -308,7 +309,7 @@ def create_isofunctional_modes(original_modes, span_a):
         })
     return mirrored_modes
 
-def generate_task_set(num_tasks, mode_ratio=0.25, skewness_ratio=None, filename=None):
+def generate_task_set(num_tasks, mode_ratio=0.125, skewness_ratio=None, filename=None):
     tasks = []
     task_num = 1
     attempts = 0
@@ -522,6 +523,9 @@ def print_detailed_task_info(task):
         print(f"    CPUs Type B: {mode['cpus_b']}")
 
 if __name__ == "__main__":
+
+    np.random.seed(0)
+
     if len(sys.argv) < 2:
         print("Usage: python3 script.py [num_tasks] [mode_ratio] [skewness_ratio] [output_file]")
         print("   or: python3 script.py set [total_tasks] [iso_tasks] [likely_unsafe_combined_elasticity_tasks] [iso_mirror = true]")
@@ -546,7 +550,7 @@ if __name__ == "__main__":
             else:
                 iso = True
 
-            tasks = generate_task_set_with_iso(total_tasks, iso_tasks, 0.25, likely_unsafe_combined_elasticity_tasks > 0, likely_unsafe_combined_elasticity_tasks)
+            tasks = generate_task_set_with_iso(total_tasks, iso_tasks, 0.125, likely_unsafe_combined_elasticity_tasks > 0, likely_unsafe_combined_elasticity_tasks)
 
             if filename:
                 print("\n=== YAML Format Output To File ===")
