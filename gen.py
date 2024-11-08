@@ -4,9 +4,10 @@ import sys
 
 # Global system CPU constraints
 MAX_ALLOWED_CPUS = 16
-MIN_ALLOWED_CPUS = 2
+MIN_ALLOWED_CPUS = 1
 
-UNSAFE_AMOUNT = 4
+UNSAFE_AMOUNT = 2
+MIN_UNSAFE_MODES = 4
 
 iso = False
 
@@ -187,13 +188,13 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
         span_b = span_a
 
     #if we want tasks which will be unsafe for evaluation
-    returning = False
+    unsafe_modes = 0
     for mode in mode_info:
         for mode2 in mode_info:
             if ((mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b'])) and ((np.abs(mode['cpus_a'] - mode2['cpus_a'])) >= UNSAFE_AMOUNT and (np.abs(mode['cpus_b'] - mode2['cpus_b']) >= UNSAFE_AMOUNT)):
-                returning = True
+                unsafe_modes += 1
     
-    if combined_elasticity and not returning:
+    if combined_elasticity and unsafe_modes < (MIN_UNSAFE_MODES * 2):
         return None
     
     return {
