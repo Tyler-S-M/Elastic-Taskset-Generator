@@ -3,8 +3,8 @@ import math
 import sys
 
 # Global system CPU constraints
-TOTAL_CPUS_A = 128  # Total type A CPUs available in system
-TOTAL_CPUS_B = 80  # Total type B CPUs available in system
+TOTAL_CPUS_A = 64  # Total type A CPUs available in system
+TOTAL_CPUS_B = 68  # Total type B CPUs available in system
 
 MAX_ALLOWED_CPUS = 32
 MIN_ALLOWED_CPUS = 2
@@ -79,9 +79,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     pmax = 1 / (2 * (2 + math.sqrt(2)))
     
     # Generate ratio of span to minimum period
-    ratios = [0.4, 0.5, 0.7, 1.0]
-    probabilities = [0.4, 0.3, 0.2, 0.1]
-    chosen_ratio = np.random.choice(ratios, p=probabilities) * pmax
+    chosen_ratio = np.random.uniform(0.6, 0.8)
     
     # Generate skewness ratio (random between 0.2 and 0.8)
     if skewness_ratio is None:
@@ -92,8 +90,15 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     segments = []
     segment_strands = []
     segment_types = []  # 'a' or 'b'
+
+    # Generate period uniformly between 50ms and 1s
+    period_low = np.random.uniform(50, 1000)
+    period = np.random.uniform(50, 1000)
+
+    if period_low > period:
+        period_low, period = period, period_low
     
-    target_span = chosen_ratio * 1000  # Converting to milliseconds
+    target_span = chosen_ratio * period  # Converting to milliseconds
     target_span_a = target_span * skewness_ratio
     current_span_a = 0
     
@@ -139,13 +144,6 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
             max_work_b = min_work_b
         else:
             max_work_a = min_work_a
-    
-    # Generate period uniformly between 50ms and 1s
-    period_low = np.random.uniform(50, 1000)
-    period = np.random.uniform(50, 1000)
-
-    if period_low > period:
-        period_low, period = period, period_low
     
     # Generate elasticity value
     elasticity = np.random.uniform(0, 1)
