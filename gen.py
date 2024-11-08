@@ -9,7 +9,7 @@ TOTAL_CPUS_B = 68  # Total type B CPUs available in system
 MAX_ALLOWED_CPUS = 16
 MIN_ALLOWED_CPUS = 4
 
-UNSAFE_AMOUNT = 4
+UNSAFE_AMOUNT = 2
 
 iso = False
 
@@ -199,7 +199,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     returning = False
     for mode in mode_info:
         for mode2 in mode_info:
-            if (mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b']) and ((np.abs(mode['cpus_a'] - mode2['cpus_a'])) >= UNSAFE_AMOUNT and (np.abs(mode['cpus_b'] - mode2['cpus_b']) >= UNSAFE_AMOUNT)):
+            if ((mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b'])) and ((np.abs(mode['cpus_a'] - mode2['cpus_a'])) >= UNSAFE_AMOUNT and (np.abs(mode['cpus_b'] - mode2['cpus_b']) >= UNSAFE_AMOUNT)):
                 returning = True
     
     if combined_elasticity and not returning:
