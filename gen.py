@@ -6,8 +6,10 @@ import sys
 TOTAL_CPUS_A = 64  # Total type A CPUs available in system
 TOTAL_CPUS_B = 68  # Total type B CPUs available in system
 
-MAX_ALLOWED_CPUS = 32
-MIN_ALLOWED_CPUS = 2
+MAX_ALLOWED_CPUS = 16
+MIN_ALLOWED_CPUS = 4
+
+UNSAFE_AMOUNT = 4
 
 iso = False
 
@@ -52,7 +54,7 @@ def is_valid_cpus(cpus_a, cpus_b, skewness_ratio):
         if (cpus_a > TOTAL_CPUS_A or cpus_b > TOTAL_CPUS_B):
             return False
 
-        if ((cpus_a + cpus_b) > MAX_ALLOWED_CPUS):
+        if (cpus_a  > MAX_ALLOWED_CPUS) or (cpus_b > MAX_ALLOWED_CPUS):
             return False
 
         if (cpus_a < MIN_ALLOWED_CPUS) or (cpus_b < MIN_ALLOWED_CPUS):
@@ -197,7 +199,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     returning = False
     for mode in mode_info:
         for mode2 in mode_info:
-            if (mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b']):
+            if (mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b']) and ((np.abs(mode['cpus_a'] - mode2['cpus_a'])) >= UNSAFE_AMOUNT and (np.abs(mode['cpus_b'] - mode2['cpus_b']) >= UNSAFE_AMOUNT)):
                 returning = True
     
     if combined_elasticity and not returning:
@@ -384,18 +386,7 @@ def generate_task_set(num_tasks, mode_ratio=0.125, skewness_ratio=None, filename
     return tasks
 
 def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined_elasticity=False, count=0):
-    """
-    Generate a set of tasks where some are isofunctional and their CPU requirements 
-    sum to system totals.
-    
-    Args:
-        total_tasks (int): Total number of tasks to generate
-        iso_tasks (int): Number of isofunctional tasks within the total
-        mode_ratio (float): Ratio for mode generation
-        
-    Returns:
-        list: List of generated tasks
-    """
+
     if iso_tasks > total_tasks:
         raise ValueError("Number of isofunctional tasks cannot exceed total tasks")
     
@@ -421,16 +412,8 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
             task = generate_task(mode_ratio, skewness_ratio=1.0)
             if task is None:
                 continue
-                
-            # Check if any mode uses approximately the target CPUs
-            valid_modes = False
-            for mode in task['mode_info']:
-                if (abs(mode['cpus_a'] - target_cpus) <= 1 or 
-                    abs(mode['cpus_b'] - target_cpus) <= 1):
-                    valid_modes = True
-                    break
             
-            if valid_modes:
+            else:
                 print(f"\n=== Isofunctional Task {i+1} ===")
                 print_detailed_task_info(task)
                 tasks.append(task)
@@ -465,16 +448,8 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
 
             if task is None:
                 continue
-            
-            # Check if any mode uses approximately the target CPUs
-            valid_modes = False
-            for mode in task['mode_info']:
-                if (abs(mode['cpus_a'] - target_cpus_a) <= 1 and 
-                    abs(mode['cpus_b'] - target_cpus_b) <= 1):
-                    valid_modes = True
-                    break
-            
-            if valid_modes:
+
+            else:
                 print(f"\n=== Regular Task {iso_tasks + i + 1} ===")
                 print_detailed_task_info(task)
                 tasks.append(task)
