@@ -3,13 +3,10 @@ import math
 import sys
 
 # Global system CPU constraints
-TOTAL_CPUS_A = 64  # Total type A CPUs available in system
-TOTAL_CPUS_B = 68  # Total type B CPUs available in system
-
 MAX_ALLOWED_CPUS = 16
-MIN_ALLOWED_CPUS = 4
+MIN_ALLOWED_CPUS = 2
 
-UNSAFE_AMOUNT = 2
+UNSAFE_AMOUNT = 4
 
 iso = False
 
@@ -51,9 +48,6 @@ def is_valid_cpus(cpus_a, cpus_b, skewness_ratio):
         if (cpus_a is None or cpus_b is None):
             return False
 
-        if (cpus_a > TOTAL_CPUS_A or cpus_b > TOTAL_CPUS_B):
-            return False
-
         if (cpus_a  > MAX_ALLOWED_CPUS) or (cpus_b > MAX_ALLOWED_CPUS):
             return False
 
@@ -63,9 +57,6 @@ def is_valid_cpus(cpus_a, cpus_b, skewness_ratio):
     else:
 
         if (cpus_a is None):
-            return False
-
-        if (cpus_a > TOTAL_CPUS_A):
             return False
 
         if (cpus_a > MAX_ALLOWED_CPUS):
@@ -340,10 +331,6 @@ def generate_task_set(num_tasks, mode_ratio=0.125, skewness_ratio=None, filename
             
             print(f"\nElasticity: {task['elasticity']:.3f}")
             
-            print(f"\nSystem Constraints:")
-            print(f"  Total System CPUs Type A: {TOTAL_CPUS_A}")
-            print(f"  Total System CPUs Type B: {TOTAL_CPUS_B}")
-            
             print("\nSegments (length, (min_strands, max_strands), type):")
             for idx, (length, strands, type_) in enumerate(task['segments'], 1):
                 print(f"  Segment {idx}: {length:.2f}ms, {strands}, Type {type_}")
@@ -391,23 +378,12 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
         raise ValueError("Number of isofunctional tasks cannot exceed total tasks")
     
     tasks = []
-    remaining_cpus_a = TOTAL_CPUS_A
-    remaining_cpus_b = TOTAL_CPUS_B
     
     print(f"\nGenerating {total_tasks} tasks ({iso_tasks} isofunctional)")
-    print(f"Target: Total CPUs Type A: {TOTAL_CPUS_A}, Type B: {TOTAL_CPUS_B}\n")
     
     # Generate isofunctional tasks first
     for i in range(iso_tasks):
         while True:
-            # Calculate target CPUs for this task (distribute remaining evenly)
-            target_cpus = max(
-                MIN_ALLOWED_CPUS,
-                min(
-                    remaining_cpus_a // (iso_tasks - i),
-                    MAX_ALLOWED_CPUS // 2  # Ensure room for both A and B
-                )
-            )
             
             task = generate_task(mode_ratio, skewness_ratio=1.0)
             if task is None:
@@ -417,27 +393,11 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
                 print(f"\n=== Isofunctional Task {i+1} ===")
                 print_detailed_task_info(task)
                 tasks.append(task)
-                remaining_cpus_a -= target_cpus
-                remaining_cpus_b -= target_cpus
                 break
     
     # Generate regular tasks
     for i in range(total_tasks - iso_tasks):
         while True:
-            target_cpus_a = max(
-                MIN_ALLOWED_CPUS,
-                min(
-                    remaining_cpus_a // (total_tasks - iso_tasks - i),
-                    MAX_ALLOWED_CPUS // 2
-                )
-            )
-            target_cpus_b = max(
-                MIN_ALLOWED_CPUS,
-                min(
-                    remaining_cpus_b // (total_tasks - iso_tasks - i),
-                    MAX_ALLOWED_CPUS // 2
-                )
-            )
             
             # Generate with random skewness
             combined = False
@@ -453,8 +413,6 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
                 print(f"\n=== Regular Task {iso_tasks + i + 1} ===")
                 print_detailed_task_info(task)
                 tasks.append(task)
-                remaining_cpus_a -= target_cpus_a
-                remaining_cpus_b -= target_cpus_b
                 break
     
     return tasks
@@ -545,8 +503,8 @@ if __name__ == "__main__":
             total_cpus_a = sum(max(mode['cpus_a'] for mode in task['mode_info']) for task in tasks)
             total_cpus_b = sum(max(mode['cpus_b'] for mode in task['mode_info']) for task in tasks)
             print(f"\nFinal CPU Allocation:")
-            print(f"Total CPUs Type A used: {total_cpus_a}/{TOTAL_CPUS_A}")
-            print(f"Total CPUs Type B used: {total_cpus_b}/{TOTAL_CPUS_B}")
+            print(f"Total CPUs Type A used: {total_cpus_a}")
+            print(f"Total CPUs Type B used: {total_cpus_b}")
             
         except ValueError as e:
             print(f"Error: {e}")
