@@ -7,7 +7,7 @@ MAX_ALLOWED_CPUS = 16
 MIN_ALLOWED_CPUS = 1
 
 UNSAFE_AMOUNT = 2
-MIN_UNSAFE_MODES = 4
+MIN_UNSAFE_AVERAGE = 0.5
 
 iso = False
 
@@ -194,7 +194,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
             if ((mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b'])) and ((np.abs(mode['cpus_a'] - mode2['cpus_a'])) >= UNSAFE_AMOUNT and (np.abs(mode['cpus_b'] - mode2['cpus_b']) >= UNSAFE_AMOUNT)):
                 unsafe_modes += 1
     
-    if combined_elasticity and unsafe_modes < (MIN_UNSAFE_MODES * 2):
+    if combined_elasticity and ((unsafe_modes / len(mode_info)) < (MIN_UNSAFE_AVERAGE)):
         return None
     
     return {
