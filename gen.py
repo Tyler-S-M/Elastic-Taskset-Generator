@@ -2,12 +2,19 @@ import numpy as np
 import math
 import sys
 
+#light: 4 - 1
+#normal 4 - 16
+
 # Global system CPU constraints
-MAX_ALLOWED_CPUS = 16
+MAX_ALLOWED_CPUS = 4
 MIN_ALLOWED_CPUS = 1
+
+MIN_PERIOD = 0.2
 
 UNSAFE_AMOUNT = 2
 MIN_UNSAFE_AVERAGE = 0.2
+
+MAX_ALLOWED_DIFFERENCE = 100
 
 iso = False
 
@@ -73,11 +80,11 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     pmax = 1 / (2 * (2 + math.sqrt(2)))
     
     # Generate ratio of span to minimum period
-    chosen_ratio = np.random.uniform(0.6, 0.8)
+    chosen_ratio = np.random.uniform(MIN_PERIOD, 0.8)
     
     # Generate skewness ratio (random between 0.2 and 0.8)
     if skewness_ratio is None:
-        skewness_ratio = np.random.uniform(0.2, 0.8)
+        skewness_ratio = np.random.uniform(MIN_PERIOD, 0.8)
     
     # Generate segments until we reach the target span
     total_span = 0
@@ -188,13 +195,17 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
         span_b = span_a
 
     #if we want tasks which will be unsafe for evaluation
+    too_far = False
     unsafe_modes = 0
     for mode in mode_info:
         for mode2 in mode_info:
             if ((mode['cpus_a'] > mode2['cpus_a'] and mode['cpus_b'] < mode2['cpus_b']) or (mode['cpus_a'] < mode2['cpus_a'] and mode['cpus_b'] > mode2['cpus_b'])) and ((((np.abs(mode['cpus_a'] - mode2['cpus_a'])) >= UNSAFE_AMOUNT) and ((mode['cpus_a'] - mode['cpus_b']) < 0)) or (((np.abs(mode['cpus_a'] - mode2['cpus_a'])) >= UNSAFE_AMOUNT) and ((mode['cpus_a'] - mode['cpus_b']) < 0))):
                 unsafe_modes += 1
+            if np.abs(mode['cpus_a'] - mode['cpus_b']) > MAX_ALLOWED_DIFFERENCE:
+                too_far = True
+                break
     
-    if combined_elasticity and ((unsafe_modes / (len(mode_info) * len(mode_info))) < (MIN_UNSAFE_AVERAGE)):
+    if combined_elasticity and (((unsafe_modes / (len(mode_info) * len(mode_info))) < (MIN_UNSAFE_AVERAGE)) or too_far):
         return None
     
     return {
@@ -405,7 +416,7 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
             if combined_elasticity and i < count:
                 combined = True
 
-            task = generate_task(mode_ratio, np.random.uniform(0.2, 0.8), combined)
+            task = generate_task(mode_ratio, 0.5, combined)
 
             if task is None:
                 continue
@@ -482,7 +493,7 @@ if __name__ == "__main__":
             else:
                 iso = True
 
-            tasks = generate_task_set_with_iso(total_tasks, iso_tasks, 0.125, likely_unsafe_combined_elasticity_tasks > 0, likely_unsafe_combined_elasticity_tasks)
+            tasks = generate_task_set_with_iso(total_tasks, iso_tasks, 0.25, likely_unsafe_combined_elasticity_tasks > 0, likely_unsafe_combined_elasticity_tasks)
 
             if filename:
                 print("\n=== YAML Format Output To File ===")
