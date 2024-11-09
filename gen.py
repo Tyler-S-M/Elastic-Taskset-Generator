@@ -279,11 +279,11 @@ def write_yaml_format(task_num, task, file):
             
         period_ns = int(mode['period'] * ms_to_ns)
         
-        file.write(f"      - work: {{sec: 0, nsec: {work_ns}}}\n")
-        file.write(f"        span: {{sec: 0, nsec: {span_ns}}}\n")
-        file.write(f"        gpu_work: {{sec: 0, nsec: {gpu_work_ns}}}\n")
-        file.write(f"        gpu_span: {{sec: 0, nsec: {gpu_span_ns}}}\n")
-        file.write(f"        period: {{sec: 0, nsec: {period_ns}}}\n")
+        file.write(f"      - work: {{sec: {int(work_ns / 1000000000)}, nsec: {work_ns % 1000000000}}}\n")
+        file.write(f"        span: {{sec: {int(span_ns / 1000000000)}, nsec: {span_ns % 1000000000}}}\n")
+        file.write(f"        gpu_work: {{sec: {int(gpu_work_ns / 1000000000)}, nsec: {gpu_work_ns % 1000000000}}}\n")
+        file.write(f"        gpu_span: {{sec: {int(gpu_span_ns / 1000000000)}, nsec: {gpu_span_ns % 1000000000}}}\n")
+        file.write(f"        period: {{sec: {int(period_ns / 1000000000)}, nsec: {period_ns % 1000000000}}}\n")
     
     file.write("\n")  # Add blank line between tasks
 

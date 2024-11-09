@@ -85,8 +85,8 @@ def main():
     output_file = 'selected_tasks.yaml'
     try:
         with open(output_file, 'w') as f:
-            f.write(HEADER + '\n')
-            f.write('\n\n'.join(modified_tasks))
+            f.write(HEADER + '\n  ')
+            f.write('\n\n  '.join(modified_tasks))
         print(f"Successfully wrote {len(modified_tasks)} tasks to {output_file}")
     except Exception as e:
         print(f"Error writing output file: {e}")

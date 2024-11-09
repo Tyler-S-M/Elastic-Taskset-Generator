@@ -618,7 +618,7 @@
         period: {sec: 0, nsec: 917725746}
       - work: {sec: 0, nsec: 880572700}
         span: {sec: 0, nsec: 203897066}
-        gpu_work: {sec: 0, nsec: 1091547825}
+        gpu_work: {sec: 1, nsec: 91547825}
         gpu_span: {sec: 0, nsec: 195958670}
         period: {sec: 0, nsec: 917725746}
 
@@ -1008,7 +1008,7 @@
         period: {sec: 0, nsec: 865704501}
       - work: {sec: 0, nsec: 818972153}
         span: {sec: 0, nsec: 197261281}
-        gpu_work: {sec: 0, nsec: 1092638463}
+        gpu_work: {sec: 1, nsec: 92638463}
         gpu_span: {sec: 0, nsec: 193637774}
         period: {sec: 0, nsec: 865704501}
 
@@ -1060,7 +1060,7 @@
         period: {sec: 0, nsec: 909541824}
       - work: {sec: 0, nsec: 741832450}
         span: {sec: 0, nsec: 190285496}
-        gpu_work: {sec: 0, nsec: 1028492711}
+        gpu_work: {sec: 1, nsec: 28492711}
         gpu_span: {sec: 0, nsec: 188670132}
         period: {sec: 0, nsec: 909541824}
 
@@ -1523,12 +1523,12 @@
         period: {sec: 0, nsec: 918872696}
       - work: {sec: 0, nsec: 590192036}
         span: {sec: 0, nsec: 181112319}
-        gpu_work: {sec: 0, nsec: 1000301883}
+        gpu_work: {sec: 1, nsec: 301883}
         gpu_span: {sec: 0, nsec: 183697189}
         period: {sec: 0, nsec: 918872696}
       - work: {sec: 0, nsec: 674937176}
         span: {sec: 0, nsec: 181112319}
-        gpu_work: {sec: 0, nsec: 1170600292}
+        gpu_work: {sec: 1, nsec: 170600292}
         gpu_span: {sec: 0, nsec: 183697189}
         period: {sec: 0, nsec: 918872696}
 
@@ -2932,7 +2932,7 @@
         period: {sec: 0, nsec: 993665344}
       - work: {sec: 0, nsec: 773563566}
         span: {sec: 0, nsec: 194759397}
-        gpu_work: {sec: 0, nsec: 1104392222}
+        gpu_work: {sec: 1, nsec: 104392222}
         gpu_span: {sec: 0, nsec: 198674152}
         period: {sec: 0, nsec: 993665344}
 
@@ -3088,7 +3088,7 @@
         period: {sec: 0, nsec: 919207441}
       - work: {sec: 0, nsec: 738073997}
         span: {sec: 0, nsec: 176704523}
-        gpu_work: {sec: 0, nsec: 1031846762}
+        gpu_work: {sec: 1, nsec: 31846762}
         gpu_span: {sec: 0, nsec: 176252521}
         period: {sec: 0, nsec: 919207441}
 
@@ -3244,7 +3244,7 @@
         period: {sec: 0, nsec: 988544278}
       - work: {sec: 0, nsec: 735464584}
         span: {sec: 0, nsec: 192102538}
-        gpu_work: {sec: 0, nsec: 1017226224}
+        gpu_work: {sec: 1, nsec: 17226224}
         gpu_span: {sec: 0, nsec: 178469596}
         period: {sec: 0, nsec: 988544278}
 
@@ -3395,12 +3395,12 @@
         period: {sec: 0, nsec: 990297713}
       - work: {sec: 0, nsec: 706962227}
         span: {sec: 0, nsec: 209567533}
-        gpu_work: {sec: 0, nsec: 1016075765}
+        gpu_work: {sec: 1, nsec: 16075765}
         gpu_span: {sec: 0, nsec: 195440950}
         period: {sec: 0, nsec: 990297713}
       - work: {sec: 0, nsec: 810865704}
         span: {sec: 0, nsec: 209567533}
-        gpu_work: {sec: 0, nsec: 1170582098}
+        gpu_work: {sec: 1, nsec: 170582098}
         gpu_span: {sec: 0, nsec: 195440950}
         period: {sec: 0, nsec: 990297713}
 
@@ -3447,12 +3447,12 @@
         period: {sec: 0, nsec: 988010276}
       - work: {sec: 0, nsec: 799777214}
         span: {sec: 0, nsec: 213158482}
-        gpu_work: {sec: 0, nsec: 1078463773}
+        gpu_work: {sec: 1, nsec: 78463773}
         gpu_span: {sec: 0, nsec: 216217095}
         period: {sec: 0, nsec: 988010276}
       - work: {sec: 0, nsec: 912409651}
         span: {sec: 0, nsec: 213158482}
-        gpu_work: {sec: 0, nsec: 1213604226}
+        gpu_work: {sec: 1, nsec: 213604226}
         gpu_span: {sec: 0, nsec: 216217095}
         period: {sec: 0, nsec: 988010276}
 
@@ -3681,12 +3681,12 @@
         period: {sec: 0, nsec: 970104177}
       - work: {sec: 0, nsec: 696337572}
         span: {sec: 0, nsec: 193832659}
-        gpu_work: {sec: 0, nsec: 1005701976}
+        gpu_work: {sec: 1, nsec: 5701976}
         gpu_span: {sec: 0, nsec: 191611219}
         period: {sec: 0, nsec: 970104177}
       - work: {sec: 0, nsec: 814622503}
         span: {sec: 0, nsec: 193832659}
-        gpu_work: {sec: 0, nsec: 1150766275}
+        gpu_work: {sec: 1, nsec: 150766275}
         gpu_span: {sec: 0, nsec: 191611219}
         period: {sec: 0, nsec: 970104177}
 
@@ -3946,7 +3946,7 @@
         period: {sec: 0, nsec: 987306688}
       - work: {sec: 0, nsec: 688862248}
         span: {sec: 0, nsec: 170022665}
-        gpu_work: {sec: 0, nsec: 1011244266}
+        gpu_work: {sec: 1, nsec: 11244266}
         gpu_span: {sec: 0, nsec: 171506704}
         period: {sec: 0, nsec: 987306688}
 
@@ -4024,7 +4024,7 @@
         period: {sec: 0, nsec: 960144293}
       - work: {sec: 0, nsec: 722304236}
         span: {sec: 0, nsec: 181845629}
-        gpu_work: {sec: 0, nsec: 1050271117}
+        gpu_work: {sec: 1, nsec: 50271117}
         gpu_span: {sec: 0, nsec: 178099940}
         period: {sec: 0, nsec: 960144293}
 
@@ -4076,7 +4076,7 @@
         period: {sec: 0, nsec: 848282050}
       - work: {sec: 0, nsec: 777437493}
         span: {sec: 0, nsec: 199861800}
-        gpu_work: {sec: 0, nsec: 1066695541}
+        gpu_work: {sec: 1, nsec: 66695541}
         gpu_span: {sec: 0, nsec: 188762604}
         period: {sec: 0, nsec: 848282050}
 
@@ -4409,12 +4409,12 @@
         period: {sec: 0, nsec: 984591282}
       - work: {sec: 0, nsec: 768568879}
         span: {sec: 0, nsec: 199289432}
-        gpu_work: {sec: 0, nsec: 1077242152}
+        gpu_work: {sec: 1, nsec: 77242152}
         gpu_span: {sec: 0, nsec: 195835293}
         period: {sec: 0, nsec: 984591282}
       - work: {sec: 0, nsec: 891708422}
         span: {sec: 0, nsec: 199289432}
-        gpu_work: {sec: 0, nsec: 1236444238}
+        gpu_work: {sec: 1, nsec: 236444238}
         gpu_span: {sec: 0, nsec: 195835293}
         period: {sec: 0, nsec: 984591282}
 
@@ -4778,7 +4778,7 @@
         period: {sec: 0, nsec: 959784055}
       - work: {sec: 0, nsec: 794033850}
         span: {sec: 0, nsec: 196711446}
-        gpu_work: {sec: 0, nsec: 1111495816}
+        gpu_work: {sec: 1, nsec: 111495816}
         gpu_span: {sec: 0, nsec: 196062712}
         period: {sec: 0, nsec: 959784055}
 
@@ -5350,7 +5350,7 @@
         period: {sec: 0, nsec: 949682716}
       - work: {sec: 0, nsec: 726237550}
         span: {sec: 0, nsec: 186294640}
-        gpu_work: {sec: 0, nsec: 1020645663}
+        gpu_work: {sec: 1, nsec: 20645663}
         gpu_span: {sec: 0, nsec: 191813700}
         period: {sec: 0, nsec: 949682716}
 
@@ -6078,7 +6078,7 @@
         period: {sec: 0, nsec: 949492775}
       - work: {sec: 0, nsec: 816502835}
         span: {sec: 0, nsec: 201734194}
-        gpu_work: {sec: 0, nsec: 1061397195}
+        gpu_work: {sec: 1, nsec: 61397195}
         gpu_span: {sec: 0, nsec: 190592071}
         period: {sec: 0, nsec: 949492775}
 
@@ -6572,7 +6572,7 @@
         period: {sec: 0, nsec: 884845071}
       - work: {sec: 0, nsec: 889273632}
         span: {sec: 0, nsec: 204882475}
-        gpu_work: {sec: 0, nsec: 1110025364}
+        gpu_work: {sec: 1, nsec: 110025364}
         gpu_span: {sec: 0, nsec: 197968225}
         period: {sec: 0, nsec: 884845071}
 
@@ -6598,7 +6598,7 @@
         period: {sec: 0, nsec: 781744748}
       - work: {sec: 0, nsec: 529617880}
         span: {sec: 0, nsec: 144215944}
-        gpu_work: {sec: 0, nsec: 1061141444}
+        gpu_work: {sec: 1, nsec: 61141444}
         gpu_span: {sec: 0, nsec: 161781443}
         period: {sec: 0, nsec: 781744748}
 
@@ -7040,7 +7040,7 @@
         period: {sec: 0, nsec: 984488082}
       - work: {sec: 0, nsec: 720596316}
         span: {sec: 0, nsec: 187984785}
-        gpu_work: {sec: 0, nsec: 1096753127}
+        gpu_work: {sec: 1, nsec: 96753127}
         gpu_span: {sec: 0, nsec: 183955297}
         period: {sec: 0, nsec: 984488082}
 
@@ -7248,7 +7248,7 @@
         period: {sec: 0, nsec: 917833876}
       - work: {sec: 0, nsec: 846407269}
         span: {sec: 0, nsec: 196046896}
-        gpu_work: {sec: 0, nsec: 1139200523}
+        gpu_work: {sec: 1, nsec: 139200523}
         gpu_span: {sec: 0, nsec: 194898512}
         period: {sec: 0, nsec: 917833876}
 
@@ -7508,7 +7508,7 @@
         period: {sec: 0, nsec: 790941950}
       - work: {sec: 0, nsec: 618730545}
         span: {sec: 0, nsec: 160258947}
-        gpu_work: {sec: 0, nsec: 1012515980}
+        gpu_work: {sec: 1, nsec: 12515980}
         gpu_span: {sec: 0, nsec: 161348496}
         period: {sec: 0, nsec: 790941950}
 
@@ -7690,7 +7690,7 @@
         period: {sec: 0, nsec: 951928662}
       - work: {sec: 0, nsec: 833018976}
         span: {sec: 0, nsec: 197922576}
-        gpu_work: {sec: 0, nsec: 1131641676}
+        gpu_work: {sec: 1, nsec: 131641676}
         gpu_span: {sec: 0, nsec: 194088739}
         period: {sec: 0, nsec: 951928662}
 
@@ -7945,12 +7945,12 @@
         period: {sec: 0, nsec: 989504320}
       - work: {sec: 0, nsec: 760445377}
         span: {sec: 0, nsec: 211009413}
-        gpu_work: {sec: 0, nsec: 1013098316}
+        gpu_work: {sec: 1, nsec: 13098316}
         gpu_span: {sec: 0, nsec: 211134360}
         period: {sec: 0, nsec: 989504320}
       - work: {sec: 0, nsec: 892228356}
         span: {sec: 0, nsec: 211009413}
-        gpu_work: {sec: 0, nsec: 1157893323}
+        gpu_work: {sec: 1, nsec: 157893323}
         gpu_span: {sec: 0, nsec: 211134360}
         period: {sec: 0, nsec: 989504320}
 
@@ -8054,7 +8054,7 @@
         period: {sec: 0, nsec: 917316216}
       - work: {sec: 0, nsec: 719935768}
         span: {sec: 0, nsec: 177873112}
-        gpu_work: {sec: 0, nsec: 1061598302}
+        gpu_work: {sec: 1, nsec: 61598302}
         gpu_span: {sec: 0, nsec: 181753815}
         period: {sec: 0, nsec: 917316216}
 
@@ -8257,12 +8257,12 @@
         period: {sec: 0, nsec: 975398888}
       - work: {sec: 0, nsec: 755439458}
         span: {sec: 0, nsec: 219052124}
-        gpu_work: {sec: 0, nsec: 1098244034}
+        gpu_work: {sec: 1, nsec: 98244034}
         gpu_span: {sec: 0, nsec: 219452114}
         period: {sec: 0, nsec: 975398888}
       - work: {sec: 0, nsec: 872287307}
         span: {sec: 0, nsec: 219052124}
-        gpu_work: {sec: 0, nsec: 1277350134}
+        gpu_work: {sec: 1, nsec: 277350134}
         gpu_span: {sec: 0, nsec: 219452114}
         period: {sec: 0, nsec: 975398888}
 
@@ -8392,7 +8392,7 @@
         period: {sec: 0, nsec: 900582350}
       - work: {sec: 0, nsec: 862891047}
         span: {sec: 0, nsec: 216879358}
-        gpu_work: {sec: 0, nsec: 1033205722}
+        gpu_work: {sec: 1, nsec: 33205722}
         gpu_span: {sec: 0, nsec: 197574967}
         period: {sec: 0, nsec: 900582350}
 
@@ -8418,7 +8418,7 @@
         period: {sec: 0, nsec: 897622100}
       - work: {sec: 0, nsec: 752388884}
         span: {sec: 0, nsec: 185509786}
-        gpu_work: {sec: 0, nsec: 1116767658}
+        gpu_work: {sec: 1, nsec: 116767658}
         gpu_span: {sec: 0, nsec: 187544254}
         period: {sec: 0, nsec: 897622100}
 
@@ -8574,7 +8574,7 @@
         period: {sec: 0, nsec: 872622564}
       - work: {sec: 0, nsec: 681697021}
         span: {sec: 0, nsec: 195228429}
-        gpu_work: {sec: 0, nsec: 1120156584}
+        gpu_work: {sec: 1, nsec: 120156584}
         gpu_span: {sec: 0, nsec: 198155024}
         period: {sec: 0, nsec: 872622564}
 
@@ -8600,7 +8600,7 @@
         period: {sec: 0, nsec: 972451410}
       - work: {sec: 0, nsec: 705417287}
         span: {sec: 0, nsec: 180452911}
-        gpu_work: {sec: 0, nsec: 1001006334}
+        gpu_work: {sec: 1, nsec: 1006334}
         gpu_span: {sec: 0, nsec: 180374385}
         period: {sec: 0, nsec: 972451410}
 
@@ -8808,7 +8808,7 @@
         period: {sec: 0, nsec: 809536130}
       - work: {sec: 0, nsec: 811700829}
         span: {sec: 0, nsec: 203372585}
-        gpu_work: {sec: 0, nsec: 1043451863}
+        gpu_work: {sec: 1, nsec: 43451863}
         gpu_span: {sec: 0, nsec: 183950979}
         period: {sec: 0, nsec: 809536130}
 
@@ -10082,7 +10082,7 @@
         period: {sec: 0, nsec: 799251287}
       - work: {sec: 0, nsec: 768478722}
         span: {sec: 0, nsec: 194498089}
-        gpu_work: {sec: 0, nsec: 1027581545}
+        gpu_work: {sec: 1, nsec: 27581545}
         gpu_span: {sec: 0, nsec: 178471959}
         period: {sec: 0, nsec: 799251287}
 
@@ -10311,12 +10311,12 @@
         period: {sec: 0, nsec: 912213910}
       - work: {sec: 0, nsec: 814730949}
         span: {sec: 0, nsec: 210867496}
-        gpu_work: {sec: 0, nsec: 1039764088}
+        gpu_work: {sec: 1, nsec: 39764088}
         gpu_span: {sec: 0, nsec: 204807641}
         period: {sec: 0, nsec: 912213910}
       - work: {sec: 0, nsec: 950697802}
         span: {sec: 0, nsec: 210867496}
-        gpu_work: {sec: 0, nsec: 1184821888}
+        gpu_work: {sec: 1, nsec: 184821888}
         gpu_span: {sec: 0, nsec: 204807641}
         period: {sec: 0, nsec: 912213910}
 
@@ -10649,12 +10649,12 @@
         period: {sec: 0, nsec: 983587508}
       - work: {sec: 0, nsec: 782326987}
         span: {sec: 0, nsec: 231761386}
-        gpu_work: {sec: 0, nsec: 1126136161}
+        gpu_work: {sec: 1, nsec: 126136161}
         gpu_span: {sec: 0, nsec: 231248692}
         period: {sec: 0, nsec: 983587508}
       - work: {sec: 0, nsec: 895527120}
         span: {sec: 0, nsec: 231761386}
-        gpu_work: {sec: 0, nsec: 1265336335}
+        gpu_work: {sec: 1, nsec: 265336335}
         gpu_span: {sec: 0, nsec: 231248692}
         period: {sec: 0, nsec: 983587508}
 
@@ -10966,7 +10966,7 @@
         period: {sec: 0, nsec: 878509204}
       - work: {sec: 0, nsec: 815303347}
         span: {sec: 0, nsec: 192179769}
-        gpu_work: {sec: 0, nsec: 1069845989}
+        gpu_work: {sec: 1, nsec: 69845989}
         gpu_span: {sec: 0, nsec: 184382580}
         period: {sec: 0, nsec: 878509204}
 
@@ -11247,12 +11247,12 @@
         period: {sec: 0, nsec: 985594848}
       - work: {sec: 0, nsec: 670154976}
         span: {sec: 0, nsec: 191747779}
-        gpu_work: {sec: 0, nsec: 1054467673}
+        gpu_work: {sec: 1, nsec: 54467673}
         gpu_span: {sec: 0, nsec: 188500625}
         period: {sec: 0, nsec: 985594848}
       - work: {sec: 0, nsec: 776553402}
         span: {sec: 0, nsec: 191747779}
-        gpu_work: {sec: 0, nsec: 1216764970}
+        gpu_work: {sec: 1, nsec: 216764970}
         gpu_span: {sec: 0, nsec: 188500625}
         period: {sec: 0, nsec: 985594848}
 
@@ -11356,7 +11356,7 @@
         period: {sec: 0, nsec: 975592983}
       - work: {sec: 0, nsec: 913062183}
         span: {sec: 0, nsec: 204339003}
-        gpu_work: {sec: 0, nsec: 1071846647}
+        gpu_work: {sec: 1, nsec: 71846647}
         gpu_span: {sec: 0, nsec: 202438409}
         period: {sec: 0, nsec: 975592983}
 
@@ -11876,7 +11876,7 @@
         period: {sec: 0, nsec: 900323434}
       - work: {sec: 0, nsec: 715277544}
         span: {sec: 0, nsec: 179146474}
-        gpu_work: {sec: 0, nsec: 1016081826}
+        gpu_work: {sec: 1, nsec: 16081826}
         gpu_span: {sec: 0, nsec: 184164591}
         period: {sec: 0, nsec: 900323434}
 
@@ -12105,12 +12105,12 @@
         period: {sec: 0, nsec: 965038412}
       - work: {sec: 0, nsec: 756393773}
         span: {sec: 0, nsec: 204143074}
-        gpu_work: {sec: 0, nsec: 1071930822}
+        gpu_work: {sec: 1, nsec: 71930822}
         gpu_span: {sec: 0, nsec: 204284413}
         period: {sec: 0, nsec: 965038412}
       - work: {sec: 0, nsec: 858959224}
         span: {sec: 0, nsec: 204143074}
-        gpu_work: {sec: 0, nsec: 1207861545}
+        gpu_work: {sec: 1, nsec: 207861545}
         gpu_span: {sec: 0, nsec: 204284413}
         period: {sec: 0, nsec: 965038412}
 
@@ -12396,7 +12396,7 @@
         period: {sec: 0, nsec: 951789277}
       - work: {sec: 0, nsec: 820803920}
         span: {sec: 0, nsec: 196376250}
-        gpu_work: {sec: 0, nsec: 1064727329}
+        gpu_work: {sec: 1, nsec: 64727329}
         gpu_span: {sec: 0, nsec: 185353633}
         period: {sec: 0, nsec: 951789277}
 
@@ -12526,7 +12526,7 @@
         period: {sec: 0, nsec: 939314944}
       - work: {sec: 0, nsec: 769787334}
         span: {sec: 0, nsec: 191321597}
-        gpu_work: {sec: 0, nsec: 1104514651}
+        gpu_work: {sec: 1, nsec: 104514651}
         gpu_span: {sec: 0, nsec: 188960073}
         period: {sec: 0, nsec: 939314944}
 
@@ -12703,12 +12703,12 @@
         period: {sec: 0, nsec: 940730005}
       - work: {sec: 0, nsec: 716127808}
         span: {sec: 0, nsec: 205169929}
-        gpu_work: {sec: 0, nsec: 1045548710}
+        gpu_work: {sec: 1, nsec: 45548710}
         gpu_span: {sec: 0, nsec: 203807482}
         period: {sec: 0, nsec: 940730005}
       - work: {sec: 0, nsec: 802512508}
         span: {sec: 0, nsec: 205169929}
-        gpu_work: {sec: 0, nsec: 1223566466}
+        gpu_work: {sec: 1, nsec: 223566466}
         gpu_span: {sec: 0, nsec: 203807482}
         period: {sec: 0, nsec: 940730005}
 
@@ -12786,7 +12786,7 @@
         period: {sec: 0, nsec: 900008373}
       - work: {sec: 0, nsec: 719875245}
         span: {sec: 0, nsec: 168505327}
-        gpu_work: {sec: 0, nsec: 1012858218}
+        gpu_work: {sec: 1, nsec: 12858218}
         gpu_span: {sec: 0, nsec: 169452589}
         period: {sec: 0, nsec: 900008373}
 
@@ -13015,12 +13015,12 @@
         period: {sec: 0, nsec: 975234112}
       - work: {sec: 0, nsec: 724320676}
         span: {sec: 0, nsec: 201980975}
-        gpu_work: {sec: 0, nsec: 1070249863}
+        gpu_work: {sec: 1, nsec: 70249863}
         gpu_span: {sec: 0, nsec: 205814693}
         period: {sec: 0, nsec: 975234112}
       - work: {sec: 0, nsec: 848416613}
         span: {sec: 0, nsec: 201980975}
-        gpu_work: {sec: 0, nsec: 1231004673}
+        gpu_work: {sec: 1, nsec: 231004673}
         gpu_span: {sec: 0, nsec: 205814693}
         period: {sec: 0, nsec: 975234112}
 
@@ -13618,7 +13618,7 @@
         period: {sec: 0, nsec: 932942137}
       - work: {sec: 0, nsec: 798680903}
         span: {sec: 0, nsec: 191390443}
-        gpu_work: {sec: 0, nsec: 1045270717}
+        gpu_work: {sec: 1, nsec: 45270717}
         gpu_span: {sec: 0, nsec: 199071231}
         period: {sec: 0, nsec: 932942137}
 
@@ -13665,12 +13665,12 @@
         period: {sec: 0, nsec: 993266711}
       - work: {sec: 0, nsec: 752116385}
         span: {sec: 0, nsec: 209346405}
-        gpu_work: {sec: 0, nsec: 1024133122}
+        gpu_work: {sec: 1, nsec: 24133122}
         gpu_span: {sec: 0, nsec: 204852291}
         period: {sec: 0, nsec: 993266711}
       - work: {sec: 0, nsec: 853759080}
         span: {sec: 0, nsec: 209346405}
-        gpu_work: {sec: 0, nsec: 1140399961}
+        gpu_work: {sec: 1, nsec: 140399961}
         gpu_span: {sec: 0, nsec: 204852291}
         period: {sec: 0, nsec: 993266711}
 
@@ -13774,7 +13774,7 @@
         period: {sec: 0, nsec: 953043158}
       - work: {sec: 0, nsec: 854555721}
         span: {sec: 0, nsec: 216003375}
-        gpu_work: {sec: 0, nsec: 1120185602}
+        gpu_work: {sec: 1, nsec: 120185602}
         gpu_span: {sec: 0, nsec: 203209661}
         period: {sec: 0, nsec: 953043158}
 
@@ -13826,7 +13826,7 @@
         period: {sec: 0, nsec: 870372537}
       - work: {sec: 0, nsec: 815661272}
         span: {sec: 0, nsec: 198189749}
-        gpu_work: {sec: 0, nsec: 1050574025}
+        gpu_work: {sec: 1, nsec: 50574025}
         gpu_span: {sec: 0, nsec: 195772388}
         period: {sec: 0, nsec: 870372537}
 
@@ -14008,7 +14008,7 @@
         period: {sec: 0, nsec: 892485551}
       - work: {sec: 0, nsec: 854143386}
         span: {sec: 0, nsec: 201080896}
-        gpu_work: {sec: 0, nsec: 1104844753}
+        gpu_work: {sec: 1, nsec: 104844753}
         gpu_span: {sec: 0, nsec: 197756347}
         period: {sec: 0, nsec: 892485551}
 
@@ -14029,12 +14029,12 @@
         period: {sec: 0, nsec: 984103249}
       - work: {sec: 0, nsec: 724773175}
         span: {sec: 0, nsec: 208198838}
-        gpu_work: {sec: 0, nsec: 1103217880}
+        gpu_work: {sec: 1, nsec: 103217880}
         gpu_span: {sec: 0, nsec: 208646886}
         period: {sec: 0, nsec: 984103249}
       - work: {sec: 0, nsec: 826490386}
         span: {sec: 0, nsec: 208198838}
-        gpu_work: {sec: 0, nsec: 1260216013}
+        gpu_work: {sec: 1, nsec: 260216013}
         gpu_span: {sec: 0, nsec: 208646886}
         period: {sec: 0, nsec: 984103249}
 
@@ -14164,7 +14164,7 @@
         period: {sec: 0, nsec: 905075300}
       - work: {sec: 0, nsec: 713172850}
         span: {sec: 0, nsec: 198405081}
-        gpu_work: {sec: 0, nsec: 1039346236}
+        gpu_work: {sec: 1, nsec: 39346236}
         gpu_span: {sec: 0, nsec: 192851181}
         period: {sec: 0, nsec: 905075300}
 
@@ -14658,7 +14658,7 @@
         period: {sec: 0, nsec: 942878136}
       - work: {sec: 0, nsec: 812175561}
         span: {sec: 0, nsec: 195749712}
-        gpu_work: {sec: 0, nsec: 1071063813}
+        gpu_work: {sec: 1, nsec: 71063813}
         gpu_span: {sec: 0, nsec: 181852381}
         period: {sec: 0, nsec: 942878136}
 
@@ -14762,7 +14762,7 @@
         period: {sec: 0, nsec: 983589991}
       - work: {sec: 0, nsec: 645147387}
         span: {sec: 0, nsec: 176210200}
-        gpu_work: {sec: 0, nsec: 1024830748}
+        gpu_work: {sec: 1, nsec: 24830748}
         gpu_span: {sec: 0, nsec: 187016118}
         period: {sec: 0, nsec: 983589991}
 
@@ -15121,12 +15121,12 @@
         period: {sec: 0, nsec: 884357207}
       - work: {sec: 0, nsec: 662191081}
         span: {sec: 0, nsec: 188259066}
-        gpu_work: {sec: 0, nsec: 1017209505}
+        gpu_work: {sec: 1, nsec: 17209505}
         gpu_span: {sec: 0, nsec: 189323398}
         period: {sec: 0, nsec: 884357207}
       - work: {sec: 0, nsec: 754641844}
         span: {sec: 0, nsec: 188259066}
-        gpu_work: {sec: 0, nsec: 1155272681}
+        gpu_work: {sec: 1, nsec: 155272681}
         gpu_span: {sec: 0, nsec: 189323398}
         period: {sec: 0, nsec: 884357207}
 
@@ -15334,7 +15334,7 @@
         period: {sec: 0, nsec: 849022851}
       - work: {sec: 0, nsec: 671860242}
         span: {sec: 0, nsec: 170730952}
-        gpu_work: {sec: 0, nsec: 1003274425}
+        gpu_work: {sec: 1, nsec: 3274425}
         gpu_span: {sec: 0, nsec: 168625132}
         period: {sec: 0, nsec: 849022851}
 
@@ -16348,7 +16348,7 @@
         period: {sec: 0, nsec: 791761860}
       - work: {sec: 0, nsec: 646458951}
         span: {sec: 0, nsec: 167328722}
-        gpu_work: {sec: 0, nsec: 1017404031}
+        gpu_work: {sec: 1, nsec: 17404031}
         gpu_span: {sec: 0, nsec: 178425681}
         period: {sec: 0, nsec: 791761860}
 
@@ -17024,7 +17024,7 @@
         period: {sec: 0, nsec: 894085713}
       - work: {sec: 0, nsec: 771607756}
         span: {sec: 0, nsec: 203591067}
-        gpu_work: {sec: 0, nsec: 1143130702}
+        gpu_work: {sec: 1, nsec: 143130702}
         gpu_span: {sec: 0, nsec: 201370243}
         period: {sec: 0, nsec: 894085713}
 
@@ -17388,7 +17388,7 @@
         period: {sec: 0, nsec: 887085008}
       - work: {sec: 0, nsec: 798579181}
         span: {sec: 0, nsec: 193359585}
-        gpu_work: {sec: 0, nsec: 1005615949}
+        gpu_work: {sec: 1, nsec: 5615949}
         gpu_span: {sec: 0, nsec: 187270696}
         period: {sec: 0, nsec: 887085008}
 
@@ -18142,7 +18142,7 @@
         period: {sec: 0, nsec: 868121359}
       - work: {sec: 0, nsec: 757619810}
         span: {sec: 0, nsec: 179309930}
-        gpu_work: {sec: 0, nsec: 1066063799}
+        gpu_work: {sec: 1, nsec: 66063799}
         gpu_span: {sec: 0, nsec: 174977845}
         period: {sec: 0, nsec: 868121359}
 
@@ -19416,7 +19416,7 @@
         period: {sec: 0, nsec: 910010234}
       - work: {sec: 0, nsec: 781752789}
         span: {sec: 0, nsec: 179228571}
-        gpu_work: {sec: 0, nsec: 1111260806}
+        gpu_work: {sec: 1, nsec: 111260806}
         gpu_span: {sec: 0, nsec: 185895642}
         period: {sec: 0, nsec: 910010234}
 
@@ -19702,7 +19702,7 @@
         period: {sec: 0, nsec: 869495946}
       - work: {sec: 0, nsec: 760327226}
         span: {sec: 0, nsec: 192455322}
-        gpu_work: {sec: 0, nsec: 1070884241}
+        gpu_work: {sec: 1, nsec: 70884241}
         gpu_span: {sec: 0, nsec: 188123262}
         period: {sec: 0, nsec: 869495946}
 
@@ -20534,7 +20534,7 @@
         period: {sec: 0, nsec: 867390322}
       - work: {sec: 0, nsec: 702323069}
         span: {sec: 0, nsec: 195835615}
-        gpu_work: {sec: 0, nsec: 1026957260}
+        gpu_work: {sec: 1, nsec: 26957260}
         gpu_span: {sec: 0, nsec: 192754978}
         period: {sec: 0, nsec: 867390322}
 
@@ -20607,12 +20607,12 @@
         period: {sec: 0, nsec: 868437743}
       - work: {sec: 0, nsec: 710525089}
         span: {sec: 0, nsec: 192598113}
-        gpu_work: {sec: 0, nsec: 1000264937}
+        gpu_work: {sec: 1, nsec: 264937}
         gpu_span: {sec: 0, nsec: 186861568}
         period: {sec: 0, nsec: 868437743}
       - work: {sec: 0, nsec: 830339855}
         span: {sec: 0, nsec: 192598113}
-        gpu_work: {sec: 0, nsec: 1129420491}
+        gpu_work: {sec: 1, nsec: 129420491}
         gpu_span: {sec: 0, nsec: 186861568}
         period: {sec: 0, nsec: 868437743}
 
@@ -20872,7 +20872,7 @@
         period: {sec: 0, nsec: 999257742}
       - work: {sec: 0, nsec: 842594974}
         span: {sec: 0, nsec: 193211950}
-        gpu_work: {sec: 0, nsec: 1010103214}
+        gpu_work: {sec: 1, nsec: 10103214}
         gpu_span: {sec: 0, nsec: 193476825}
         period: {sec: 0, nsec: 999257742}
 
@@ -21990,7 +21990,7 @@
         period: {sec: 0, nsec: 834829292}
       - work: {sec: 0, nsec: 794679955}
         span: {sec: 0, nsec: 182765328}
-        gpu_work: {sec: 0, nsec: 1066624158}
+        gpu_work: {sec: 1, nsec: 66624158}
         gpu_span: {sec: 0, nsec: 176876101}
         period: {sec: 0, nsec: 834829292}
 
@@ -22328,7 +22328,7 @@
         period: {sec: 0, nsec: 923709681}
       - work: {sec: 0, nsec: 750149610}
         span: {sec: 0, nsec: 180371126}
-        gpu_work: {sec: 0, nsec: 1003286733}
+        gpu_work: {sec: 1, nsec: 3286733}
         gpu_span: {sec: 0, nsec: 184844061}
         period: {sec: 0, nsec: 923709681}
 
@@ -22692,7 +22692,7 @@
         period: {sec: 0, nsec: 866739130}
       - work: {sec: 0, nsec: 727496276}
         span: {sec: 0, nsec: 187207031}
-        gpu_work: {sec: 0, nsec: 1090857293}
+        gpu_work: {sec: 1, nsec: 90857293}
         gpu_span: {sec: 0, nsec: 184630198}
         period: {sec: 0, nsec: 866739130}
 
@@ -22796,7 +22796,7 @@
         period: {sec: 0, nsec: 926089782}
       - work: {sec: 0, nsec: 805115011}
         span: {sec: 0, nsec: 191795399}
-        gpu_work: {sec: 0, nsec: 1110817522}
+        gpu_work: {sec: 1, nsec: 110817522}
         gpu_span: {sec: 0, nsec: 187243618}
         period: {sec: 0, nsec: 926089782}
 
@@ -23389,12 +23389,12 @@
         period: {sec: 0, nsec: 947949328}
       - work: {sec: 0, nsec: 721551939}
         span: {sec: 0, nsec: 202019667}
-        gpu_work: {sec: 0, nsec: 1001009349}
+        gpu_work: {sec: 1, nsec: 1009349}
         gpu_span: {sec: 0, nsec: 193739289}
         period: {sec: 0, nsec: 947949328}
       - work: {sec: 0, nsec: 831319869}
         span: {sec: 0, nsec: 202019667}
-        gpu_work: {sec: 0, nsec: 1124481031}
+        gpu_work: {sec: 1, nsec: 124481031}
         gpu_span: {sec: 0, nsec: 193739289}
         period: {sec: 0, nsec: 947949328}
 
@@ -23420,7 +23420,7 @@
         period: {sec: 0, nsec: 948269040}
       - work: {sec: 0, nsec: 806256833}
         span: {sec: 0, nsec: 198219837}
-        gpu_work: {sec: 0, nsec: 1023807283}
+        gpu_work: {sec: 1, nsec: 23807283}
         gpu_span: {sec: 0, nsec: 192989886}
         period: {sec: 0, nsec: 948269040}
 
@@ -23758,7 +23758,7 @@
         period: {sec: 0, nsec: 918208291}
       - work: {sec: 0, nsec: 778716310}
         span: {sec: 0, nsec: 186945541}
-        gpu_work: {sec: 0, nsec: 1117538761}
+        gpu_work: {sec: 1, nsec: 117538761}
         gpu_span: {sec: 0, nsec: 188909172}
         period: {sec: 0, nsec: 918208291}
 
@@ -24772,7 +24772,7 @@
         period: {sec: 0, nsec: 820677015}
       - work: {sec: 0, nsec: 715893542}
         span: {sec: 0, nsec: 188577131}
-        gpu_work: {sec: 0, nsec: 1022374422}
+        gpu_work: {sec: 1, nsec: 22374422}
         gpu_span: {sec: 0, nsec: 185254190}
         period: {sec: 0, nsec: 820677015}
 
@@ -25422,7 +25422,7 @@
         period: {sec: 0, nsec: 868880583}
       - work: {sec: 0, nsec: 787925711}
         span: {sec: 0, nsec: 179300762}
-        gpu_work: {sec: 0, nsec: 1087013090}
+        gpu_work: {sec: 1, nsec: 87013090}
         gpu_span: {sec: 0, nsec: 180359694}
         period: {sec: 0, nsec: 868880583}
 
@@ -25864,7 +25864,7 @@
         period: {sec: 0, nsec: 861945831}
       - work: {sec: 0, nsec: 723816594}
         span: {sec: 0, nsec: 177594732}
-        gpu_work: {sec: 0, nsec: 1007109127}
+        gpu_work: {sec: 1, nsec: 7109127}
         gpu_span: {sec: 0, nsec: 173803665}
         period: {sec: 0, nsec: 861945831}
 
@@ -26072,7 +26072,7 @@
         period: {sec: 0, nsec: 814515236}
       - work: {sec: 0, nsec: 768006501}
         span: {sec: 0, nsec: 181114469}
-        gpu_work: {sec: 0, nsec: 1036148236}
+        gpu_work: {sec: 1, nsec: 36148236}
         gpu_span: {sec: 0, nsec: 183518130}
         period: {sec: 0, nsec: 814515236}
 
@@ -26358,7 +26358,7 @@
         period: {sec: 0, nsec: 965431404}
       - work: {sec: 0, nsec: 830337947}
         span: {sec: 0, nsec: 194640468}
-        gpu_work: {sec: 0, nsec: 1121657203}
+        gpu_work: {sec: 1, nsec: 121657203}
         gpu_span: {sec: 0, nsec: 194523660}
         period: {sec: 0, nsec: 965431404}
 
@@ -26644,7 +26644,7 @@
         period: {sec: 0, nsec: 865140594}
       - work: {sec: 0, nsec: 846916333}
         span: {sec: 0, nsec: 215883346}
-        gpu_work: {sec: 0, nsec: 1123600371}
+        gpu_work: {sec: 1, nsec: 123600371}
         gpu_span: {sec: 0, nsec: 190042758}
         period: {sec: 0, nsec: 865140594}
 
@@ -26904,7 +26904,7 @@
         period: {sec: 0, nsec: 874459085}
       - work: {sec: 0, nsec: 768914482}
         span: {sec: 0, nsec: 186863197}
-        gpu_work: {sec: 0, nsec: 1029149779}
+        gpu_work: {sec: 1, nsec: 29149779}
         gpu_span: {sec: 0, nsec: 182356169}
         period: {sec: 0, nsec: 874459085}
 
@@ -27398,7 +27398,7 @@
         period: {sec: 0, nsec: 955010918}
       - work: {sec: 0, nsec: 737327223}
         span: {sec: 0, nsec: 197942289}
-        gpu_work: {sec: 0, nsec: 1033619331}
+        gpu_work: {sec: 1, nsec: 33619331}
         gpu_span: {sec: 0, nsec: 188847232}
         period: {sec: 0, nsec: 955010918}
 
@@ -27445,12 +27445,12 @@
         period: {sec: 0, nsec: 941286722}
       - work: {sec: 0, nsec: 755257505}
         span: {sec: 0, nsec: 202655962}
-        gpu_work: {sec: 0, nsec: 1057248910}
+        gpu_work: {sec: 1, nsec: 57248910}
         gpu_span: {sec: 0, nsec: 207573398}
         period: {sec: 0, nsec: 941286722}
       - work: {sec: 0, nsec: 884272782}
         span: {sec: 0, nsec: 202655962}
-        gpu_work: {sec: 0, nsec: 1234780227}
+        gpu_work: {sec: 1, nsec: 234780227}
         gpu_span: {sec: 0, nsec: 207573398}
         period: {sec: 0, nsec: 941286722}
 
@@ -27502,7 +27502,7 @@
         period: {sec: 0, nsec: 883149140}
       - work: {sec: 0, nsec: 834510573}
         span: {sec: 0, nsec: 201023671}
-        gpu_work: {sec: 0, nsec: 1070890376}
+        gpu_work: {sec: 1, nsec: 70890376}
         gpu_span: {sec: 0, nsec: 190376556}
         period: {sec: 0, nsec: 883149140}
 
@@ -27554,7 +27554,7 @@
         period: {sec: 0, nsec: 778044010}
       - work: {sec: 0, nsec: 651932185}
         span: {sec: 0, nsec: 170461596}
-        gpu_work: {sec: 0, nsec: 1024189107}
+        gpu_work: {sec: 1, nsec: 24189107}
         gpu_span: {sec: 0, nsec: 172305572}
         period: {sec: 0, nsec: 778044010}
 
@@ -27684,7 +27684,7 @@
         period: {sec: 0, nsec: 938263920}
       - work: {sec: 0, nsec: 716872992}
         span: {sec: 0, nsec: 187604782}
-        gpu_work: {sec: 0, nsec: 1001194119}
+        gpu_work: {sec: 1, nsec: 1194119}
         gpu_span: {sec: 0, nsec: 188530569}
         period: {sec: 0, nsec: 938263920}
 
@@ -27840,7 +27840,7 @@
         period: {sec: 0, nsec: 884999766}
       - work: {sec: 0, nsec: 780318019}
         span: {sec: 0, nsec: 192111267}
-        gpu_work: {sec: 0, nsec: 1036218930}
+        gpu_work: {sec: 1, nsec: 36218930}
         gpu_span: {sec: 0, nsec: 184892203}
         period: {sec: 0, nsec: 884999766}
 
@@ -28984,7 +28984,7 @@
         period: {sec: 0, nsec: 806509769}
       - work: {sec: 0, nsec: 715934403}
         span: {sec: 0, nsec: 180418040}
-        gpu_work: {sec: 0, nsec: 1006275896}
+        gpu_work: {sec: 1, nsec: 6275896}
         gpu_span: {sec: 0, nsec: 180014630}
         period: {sec: 0, nsec: 806509769}
 
@@ -29062,7 +29062,7 @@
         period: {sec: 0, nsec: 951158732}
       - work: {sec: 0, nsec: 704979041}
         span: {sec: 0, nsec: 179275202}
-        gpu_work: {sec: 0, nsec: 1095688402}
+        gpu_work: {sec: 1, nsec: 95688402}
         gpu_span: {sec: 0, nsec: 181277884}
         period: {sec: 0, nsec: 951158732}
 
@@ -29400,7 +29400,7 @@
         period: {sec: 0, nsec: 872357010}
       - work: {sec: 0, nsec: 880201886}
         span: {sec: 0, nsec: 209148050}
-        gpu_work: {sec: 0, nsec: 1086334742}
+        gpu_work: {sec: 1, nsec: 86334742}
         gpu_span: {sec: 0, nsec: 203502277}
         period: {sec: 0, nsec: 872357010}
 
@@ -29478,7 +29478,7 @@
         period: {sec: 0, nsec: 953908509}
       - work: {sec: 0, nsec: 846151175}
         span: {sec: 0, nsec: 190578096}
-        gpu_work: {sec: 0, nsec: 1178853309}
+        gpu_work: {sec: 1, nsec: 178853309}
         gpu_span: {sec: 0, nsec: 187411450}
         period: {sec: 0, nsec: 953908509}
 
@@ -29525,12 +29525,12 @@
         period: {sec: 0, nsec: 995605646}
       - work: {sec: 0, nsec: 796866278}
         span: {sec: 0, nsec: 223222638}
-        gpu_work: {sec: 0, nsec: 1129788073}
+        gpu_work: {sec: 1, nsec: 129788073}
         gpu_span: {sec: 0, nsec: 215253263}
         period: {sec: 0, nsec: 995605646}
       - work: {sec: 0, nsec: 914268773}
         span: {sec: 0, nsec: 223222638}
-        gpu_work: {sec: 0, nsec: 1300017105}
+        gpu_work: {sec: 1, nsec: 300017105}
         gpu_span: {sec: 0, nsec: 215253263}
         period: {sec: 0, nsec: 995605646}
 
@@ -29603,12 +29603,12 @@
         period: {sec: 0, nsec: 979486016}
       - work: {sec: 0, nsec: 744741870}
         span: {sec: 0, nsec: 211167077}
-        gpu_work: {sec: 0, nsec: 1111367782}
+        gpu_work: {sec: 1, nsec: 111367782}
         gpu_span: {sec: 0, nsec: 208666567}
         period: {sec: 0, nsec: 979486016}
       - work: {sec: 0, nsec: 842601784}
         span: {sec: 0, nsec: 211167077}
-        gpu_work: {sec: 0, nsec: 1293771868}
+        gpu_work: {sec: 1, nsec: 293771868}
         gpu_span: {sec: 0, nsec: 208666567}
         period: {sec: 0, nsec: 979486016}
 
@@ -30206,7 +30206,7 @@
         period: {sec: 0, nsec: 970960325}
       - work: {sec: 0, nsec: 770367923}
         span: {sec: 0, nsec: 182945825}
-        gpu_work: {sec: 0, nsec: 1079843835}
+        gpu_work: {sec: 1, nsec: 79843835}
         gpu_span: {sec: 0, nsec: 172836061}
         period: {sec: 0, nsec: 970960325}
 
@@ -30674,7 +30674,7 @@
         period: {sec: 0, nsec: 943973380}
       - work: {sec: 0, nsec: 745895848}
         span: {sec: 0, nsec: 189785503}
-        gpu_work: {sec: 0, nsec: 1093258684}
+        gpu_work: {sec: 1, nsec: 93258684}
         gpu_span: {sec: 0, nsec: 187140179}
         period: {sec: 0, nsec: 943973380}
 
@@ -30955,12 +30955,12 @@
         period: {sec: 0, nsec: 967992326}
       - work: {sec: 0, nsec: 723051470}
         span: {sec: 0, nsec: 205570048}
-        gpu_work: {sec: 0, nsec: 1015213454}
+        gpu_work: {sec: 1, nsec: 15213454}
         gpu_span: {sec: 0, nsec: 200447015}
         period: {sec: 0, nsec: 967992326}
       - work: {sec: 0, nsec: 845929943}
         span: {sec: 0, nsec: 205570048}
-        gpu_work: {sec: 0, nsec: 1140079904}
+        gpu_work: {sec: 1, nsec: 140079904}
         gpu_span: {sec: 0, nsec: 200447015}
         period: {sec: 0, nsec: 967992326}
 
@@ -32624,7 +32624,7 @@
         period: {sec: 0, nsec: 953389437}
       - work: {sec: 0, nsec: 708572746}
         span: {sec: 0, nsec: 173733129}
-        gpu_work: {sec: 0, nsec: 1101193274}
+        gpu_work: {sec: 1, nsec: 101193274}
         gpu_span: {sec: 0, nsec: 171584349}
         period: {sec: 0, nsec: 953389437}
 
@@ -32858,7 +32858,7 @@
         period: {sec: 0, nsec: 973742577}
       - work: {sec: 0, nsec: 714334799}
         span: {sec: 0, nsec: 183969598}
-        gpu_work: {sec: 0, nsec: 1102055188}
+        gpu_work: {sec: 1, nsec: 102055188}
         gpu_span: {sec: 0, nsec: 190936248}
         period: {sec: 0, nsec: 973742577}
 
@@ -32936,7 +32936,7 @@
         period: {sec: 0, nsec: 925501683}
       - work: {sec: 0, nsec: 847590917}
         span: {sec: 0, nsec: 196404753}
-        gpu_work: {sec: 0, nsec: 1139861284}
+        gpu_work: {sec: 1, nsec: 139861284}
         gpu_span: {sec: 0, nsec: 195223820}
         period: {sec: 0, nsec: 925501683}
 
@@ -33638,7 +33638,7 @@
         period: {sec: 0, nsec: 888141928}
       - work: {sec: 0, nsec: 789790595}
         span: {sec: 0, nsec: 190614466}
-        gpu_work: {sec: 0, nsec: 1067532938}
+        gpu_work: {sec: 1, nsec: 67532938}
         gpu_span: {sec: 0, nsec: 186329010}
         period: {sec: 0, nsec: 888141928}
 
@@ -33976,7 +33976,7 @@
         period: {sec: 0, nsec: 832347713}
       - work: {sec: 0, nsec: 865073233}
         span: {sec: 0, nsec: 196142408}
-        gpu_work: {sec: 0, nsec: 1071061054}
+        gpu_work: {sec: 1, nsec: 71061054}
         gpu_span: {sec: 0, nsec: 193969836}
         period: {sec: 0, nsec: 832347713}
 
@@ -34054,7 +34054,7 @@
         period: {sec: 0, nsec: 895733650}
       - work: {sec: 0, nsec: 717283384}
         span: {sec: 0, nsec: 175885386}
-        gpu_work: {sec: 0, nsec: 1006974270}
+        gpu_work: {sec: 1, nsec: 6974270}
         gpu_span: {sec: 0, nsec: 174231384}
         period: {sec: 0, nsec: 895733650}
 
@@ -34314,7 +34314,7 @@
         period: {sec: 0, nsec: 926037608}
       - work: {sec: 0, nsec: 722971554}
         span: {sec: 0, nsec: 183275893}
-        gpu_work: {sec: 0, nsec: 1057670888}
+        gpu_work: {sec: 1, nsec: 57670888}
         gpu_span: {sec: 0, nsec: 182021875}
         period: {sec: 0, nsec: 926037608}
 
@@ -35146,7 +35146,7 @@
         period: {sec: 0, nsec: 877093322}
       - work: {sec: 0, nsec: 848652919}
         span: {sec: 0, nsec: 206142993}
-        gpu_work: {sec: 0, nsec: 1076468844}
+        gpu_work: {sec: 1, nsec: 76468844}
         gpu_span: {sec: 0, nsec: 204093658}
         period: {sec: 0, nsec: 877093322}
 
@@ -35614,7 +35614,7 @@
         period: {sec: 0, nsec: 999927248}
       - work: {sec: 0, nsec: 713097814}
         span: {sec: 0, nsec: 187999604}
-        gpu_work: {sec: 0, nsec: 1071921401}
+        gpu_work: {sec: 1, nsec: 71921401}
         gpu_span: {sec: 0, nsec: 187107934}
         period: {sec: 0, nsec: 999927248}
 
@@ -36077,12 +36077,12 @@
         period: {sec: 0, nsec: 959524370}
       - work: {sec: 0, nsec: 773202187}
         span: {sec: 0, nsec: 200112871}
-        gpu_work: {sec: 0, nsec: 1056968406}
+        gpu_work: {sec: 1, nsec: 56968406}
         gpu_span: {sec: 0, nsec: 200512239}
         period: {sec: 0, nsec: 959524370}
       - work: {sec: 0, nsec: 870088047}
         span: {sec: 0, nsec: 200112871}
-        gpu_work: {sec: 0, nsec: 1224435767}
+        gpu_work: {sec: 1, nsec: 224435767}
         gpu_span: {sec: 0, nsec: 200512239}
         period: {sec: 0, nsec: 959524370}
 
@@ -36316,7 +36316,7 @@
         period: {sec: 0, nsec: 854739779}
       - work: {sec: 0, nsec: 718086859}
         span: {sec: 0, nsec: 176495002}
-        gpu_work: {sec: 0, nsec: 1016529635}
+        gpu_work: {sec: 1, nsec: 16529635}
         gpu_span: {sec: 0, nsec: 181220797}
         period: {sec: 0, nsec: 854739779}
 
@@ -36394,7 +36394,7 @@
         period: {sec: 0, nsec: 969050765}
       - work: {sec: 0, nsec: 855478315}
         span: {sec: 0, nsec: 204525400}
-        gpu_work: {sec: 0, nsec: 1068758441}
+        gpu_work: {sec: 1, nsec: 68758441}
         gpu_span: {sec: 0, nsec: 191140198}
         period: {sec: 0, nsec: 969050765}
 
@@ -36753,12 +36753,12 @@
         period: {sec: 0, nsec: 979121343}
       - work: {sec: 0, nsec: 735007683}
         span: {sec: 0, nsec: 222484297}
-        gpu_work: {sec: 0, nsec: 1039277828}
+        gpu_work: {sec: 1, nsec: 39277828}
         gpu_span: {sec: 0, nsec: 220799799}
         period: {sec: 0, nsec: 979121343}
       - work: {sec: 0, nsec: 839673981}
         span: {sec: 0, nsec: 222484297}
-        gpu_work: {sec: 0, nsec: 1174891327}
+        gpu_work: {sec: 1, nsec: 174891327}
         gpu_span: {sec: 0, nsec: 220799799}
         period: {sec: 0, nsec: 979121343}
 
@@ -37226,7 +37226,7 @@
         period: {sec: 0, nsec: 970094126}
       - work: {sec: 0, nsec: 895821994}
         span: {sec: 0, nsec: 211439224}
-        gpu_work: {sec: 0, nsec: 1116972112}
+        gpu_work: {sec: 1, nsec: 116972112}
         gpu_span: {sec: 0, nsec: 207651441}
         period: {sec: 0, nsec: 970094126}
 
@@ -37486,7 +37486,7 @@
         period: {sec: 0, nsec: 957373739}
       - work: {sec: 0, nsec: 700284564}
         span: {sec: 0, nsec: 174912267}
-        gpu_work: {sec: 0, nsec: 1022277798}
+        gpu_work: {sec: 1, nsec: 22277798}
         gpu_span: {sec: 0, nsec: 179399155}
         period: {sec: 0, nsec: 957373739}
 
@@ -37564,7 +37564,7 @@
         period: {sec: 0, nsec: 852981300}
       - work: {sec: 0, nsec: 773761231}
         span: {sec: 0, nsec: 193618864}
-        gpu_work: {sec: 0, nsec: 1106721357}
+        gpu_work: {sec: 1, nsec: 106721357}
         gpu_span: {sec: 0, nsec: 192482703}
         period: {sec: 0, nsec: 852981300}
 
@@ -37741,12 +37741,12 @@
         period: {sec: 0, nsec: 903552791}
       - work: {sec: 0, nsec: 806105297}
         span: {sec: 0, nsec: 232325850}
-        gpu_work: {sec: 0, nsec: 1030608620}
+        gpu_work: {sec: 1, nsec: 30608620}
         gpu_span: {sec: 0, nsec: 197897830}
         period: {sec: 0, nsec: 903552791}
       - work: {sec: 0, nsec: 927327820}
         span: {sec: 0, nsec: 232325850}
-        gpu_work: {sec: 0, nsec: 1187110085}
+        gpu_work: {sec: 1, nsec: 187110085}
         gpu_span: {sec: 0, nsec: 197897830}
         period: {sec: 0, nsec: 903552791}
 
@@ -38110,7 +38110,7 @@
         period: {sec: 0, nsec: 881252709}
       - work: {sec: 0, nsec: 678576626}
         span: {sec: 0, nsec: 166397992}
-        gpu_work: {sec: 0, nsec: 1035179055}
+        gpu_work: {sec: 1, nsec: 35179055}
         gpu_span: {sec: 0, nsec: 159725038}
         period: {sec: 0, nsec: 881252709}
 
@@ -38188,7 +38188,7 @@
         period: {sec: 0, nsec: 971716103}
       - work: {sec: 0, nsec: 873208078}
         span: {sec: 0, nsec: 206341619}
-        gpu_work: {sec: 0, nsec: 1032298187}
+        gpu_work: {sec: 1, nsec: 32298187}
         gpu_span: {sec: 0, nsec: 179999341}
         period: {sec: 0, nsec: 971716103}
 
@@ -38214,7 +38214,7 @@
         period: {sec: 0, nsec: 967513741}
       - work: {sec: 0, nsec: 768146247}
         span: {sec: 0, nsec: 182852365}
-        gpu_work: {sec: 0, nsec: 1030242878}
+        gpu_work: {sec: 1, nsec: 30242878}
         gpu_span: {sec: 0, nsec: 183895400}
         period: {sec: 0, nsec: 967513741}
 
@@ -38318,7 +38318,7 @@
         period: {sec: 0, nsec: 925536730}
       - work: {sec: 0, nsec: 821171326}
         span: {sec: 0, nsec: 192291116}
-        gpu_work: {sec: 0, nsec: 1084418599}
+        gpu_work: {sec: 1, nsec: 84418599}
         gpu_span: {sec: 0, nsec: 181992494}
         period: {sec: 0, nsec: 925536730}
 
@@ -38703,12 +38703,12 @@
         period: {sec: 0, nsec: 979910137}
       - work: {sec: 0, nsec: 761406323}
         span: {sec: 0, nsec: 215609415}
-        gpu_work: {sec: 0, nsec: 1080416064}
+        gpu_work: {sec: 1, nsec: 80416064}
         gpu_span: {sec: 0, nsec: 208512185}
         period: {sec: 0, nsec: 979910137}
       - work: {sec: 0, nsec: 883363148}
         span: {sec: 0, nsec: 215609415}
-        gpu_work: {sec: 0, nsec: 1237691823}
+        gpu_work: {sec: 1, nsec: 237691823}
         gpu_span: {sec: 0, nsec: 208512185}
         period: {sec: 0, nsec: 979910137}
 
@@ -38734,7 +38734,7 @@
         period: {sec: 0, nsec: 817009045}
       - work: {sec: 0, nsec: 767150782}
         span: {sec: 0, nsec: 183956716}
-        gpu_work: {sec: 0, nsec: 1038484056}
+        gpu_work: {sec: 1, nsec: 38484056}
         gpu_span: {sec: 0, nsec: 189299315}
         period: {sec: 0, nsec: 817009045}
 
@@ -38890,7 +38890,7 @@
         period: {sec: 0, nsec: 951822509}
       - work: {sec: 0, nsec: 786352521}
         span: {sec: 0, nsec: 180052944}
-        gpu_work: {sec: 0, nsec: 1067762998}
+        gpu_work: {sec: 1, nsec: 67762998}
         gpu_span: {sec: 0, nsec: 184319279}
         period: {sec: 0, nsec: 951822509}
 
@@ -39072,7 +39072,7 @@
         period: {sec: 0, nsec: 928944006}
       - work: {sec: 0, nsec: 794702626}
         span: {sec: 0, nsec: 185913285}
-        gpu_work: {sec: 0, nsec: 1022158667}
+        gpu_work: {sec: 1, nsec: 22158667}
         gpu_span: {sec: 0, nsec: 182647516}
         period: {sec: 0, nsec: 928944006}
 
@@ -39150,7 +39150,7 @@
         period: {sec: 0, nsec: 819367426}
       - work: {sec: 0, nsec: 616309273}
         span: {sec: 0, nsec: 160531835}
-        gpu_work: {sec: 0, nsec: 1012749282}
+        gpu_work: {sec: 1, nsec: 12749282}
         gpu_span: {sec: 0, nsec: 159269166}
         period: {sec: 0, nsec: 819367426}
 
@@ -40029,12 +40029,12 @@
         period: {sec: 0, nsec: 969145840}
       - work: {sec: 0, nsec: 704540172}
         span: {sec: 0, nsec: 211543561}
-        gpu_work: {sec: 0, nsec: 1031360261}
+        gpu_work: {sec: 1, nsec: 31360261}
         gpu_span: {sec: 0, nsec: 207478482}
         period: {sec: 0, nsec: 969145840}
       - work: {sec: 0, nsec: 819427828}
         span: {sec: 0, nsec: 211543561}
-        gpu_work: {sec: 0, nsec: 1170243820}
+        gpu_work: {sec: 1, nsec: 170243820}
         gpu_span: {sec: 0, nsec: 207478482}
         period: {sec: 0, nsec: 969145840}
 
@@ -40190,7 +40190,7 @@
         period: {sec: 0, nsec: 904438349}
       - work: {sec: 0, nsec: 750398016}
         span: {sec: 0, nsec: 196748439}
-        gpu_work: {sec: 0, nsec: 1123956545}
+        gpu_work: {sec: 1, nsec: 123956545}
         gpu_span: {sec: 0, nsec: 195985056}
         period: {sec: 0, nsec: 904438349}
 
@@ -40320,7 +40320,7 @@
         period: {sec: 0, nsec: 870114441}
       - work: {sec: 0, nsec: 766865052}
         span: {sec: 0, nsec: 212665901}
-        gpu_work: {sec: 0, nsec: 1105632716}
+        gpu_work: {sec: 1, nsec: 105632716}
         gpu_span: {sec: 0, nsec: 204056859}
         period: {sec: 0, nsec: 870114441}
 
@@ -40523,12 +40523,12 @@
         period: {sec: 0, nsec: 951534968}
       - work: {sec: 0, nsec: 751239332}
         span: {sec: 0, nsec: 209951025}
-        gpu_work: {sec: 0, nsec: 1094779842}
+        gpu_work: {sec: 1, nsec: 94779842}
         gpu_span: {sec: 0, nsec: 201133322}
         period: {sec: 0, nsec: 951534968}
       - work: {sec: 0, nsec: 867386563}
         span: {sec: 0, nsec: 209951025}
-        gpu_work: {sec: 0, nsec: 1233470007}
+        gpu_work: {sec: 1, nsec: 233470007}
         gpu_span: {sec: 0, nsec: 201133322}
         period: {sec: 0, nsec: 951534968}
 
@@ -40736,7 +40736,7 @@
         period: {sec: 0, nsec: 894021900}
       - work: {sec: 0, nsec: 653241263}
         span: {sec: 0, nsec: 174970982}
-        gpu_work: {sec: 0, nsec: 1004256181}
+        gpu_work: {sec: 1, nsec: 4256181}
         gpu_span: {sec: 0, nsec: 176660831}
         period: {sec: 0, nsec: 894021900}
 
@@ -40788,7 +40788,7 @@
         period: {sec: 0, nsec: 846633648}
       - work: {sec: 0, nsec: 792183372}
         span: {sec: 0, nsec: 199892743}
-        gpu_work: {sec: 0, nsec: 1104935719}
+        gpu_work: {sec: 1, nsec: 104935719}
         gpu_span: {sec: 0, nsec: 190141344}
         period: {sec: 0, nsec: 846633648}
 
@@ -42109,12 +42109,12 @@
         period: {sec: 0, nsec: 935524437}
       - work: {sec: 0, nsec: 796769781}
         span: {sec: 0, nsec: 213111329}
-        gpu_work: {sec: 0, nsec: 1092141508}
+        gpu_work: {sec: 1, nsec: 92141508}
         gpu_span: {sec: 0, nsec: 207929264}
         period: {sec: 0, nsec: 935524437}
       - work: {sec: 0, nsec: 941307370}
         span: {sec: 0, nsec: 213111329}
-        gpu_work: {sec: 0, nsec: 1234609788}
+        gpu_work: {sec: 1, nsec: 234609788}
         gpu_span: {sec: 0, nsec: 207929264}
         period: {sec: 0, nsec: 935524437}
 
@@ -42629,12 +42629,12 @@
         period: {sec: 0, nsec: 987529901}
       - work: {sec: 0, nsec: 765609623}
         span: {sec: 0, nsec: 219362864}
-        gpu_work: {sec: 0, nsec: 1073068802}
+        gpu_work: {sec: 1, nsec: 73068802}
         gpu_span: {sec: 0, nsec: 217269239}
         period: {sec: 0, nsec: 987529901}
       - work: {sec: 0, nsec: 896010439}
         span: {sec: 0, nsec: 219362864}
-        gpu_work: {sec: 0, nsec: 1239139898}
+        gpu_work: {sec: 1, nsec: 239139898}
         gpu_span: {sec: 0, nsec: 217269239}
         period: {sec: 0, nsec: 987529901}
 
@@ -43232,7 +43232,7 @@
         period: {sec: 0, nsec: 922182619}
       - work: {sec: 0, nsec: 683461137}
         span: {sec: 0, nsec: 181469169}
-        gpu_work: {sec: 0, nsec: 1021376975}
+        gpu_work: {sec: 1, nsec: 21376975}
         gpu_span: {sec: 0, nsec: 178659589}
         period: {sec: 0, nsec: 922182619}
 
@@ -43258,7 +43258,7 @@
         period: {sec: 0, nsec: 876008678}
       - work: {sec: 0, nsec: 657292800}
         span: {sec: 0, nsec: 173793238}
-        gpu_work: {sec: 0, nsec: 1017420373}
+        gpu_work: {sec: 1, nsec: 17420373}
         gpu_span: {sec: 0, nsec: 176969577}
         period: {sec: 0, nsec: 876008678}
 
@@ -43986,7 +43986,7 @@
         period: {sec: 0, nsec: 993546721}
       - work: {sec: 0, nsec: 937085944}
         span: {sec: 0, nsec: 199010543}
-        gpu_work: {sec: 0, nsec: 1091417201}
+        gpu_work: {sec: 1, nsec: 91417201}
         gpu_span: {sec: 0, nsec: 195585106}
         period: {sec: 0, nsec: 993546721}
 
@@ -44085,12 +44085,12 @@
         period: {sec: 0, nsec: 906646944}
       - work: {sec: 0, nsec: 795458605}
         span: {sec: 0, nsec: 208996459}
-        gpu_work: {sec: 0, nsec: 1046621338}
+        gpu_work: {sec: 1, nsec: 46621338}
         gpu_span: {sec: 0, nsec: 199398771}
         period: {sec: 0, nsec: 906646944}
       - work: {sec: 0, nsec: 950100996}
         span: {sec: 0, nsec: 208996459}
-        gpu_work: {sec: 0, nsec: 1184807330}
+        gpu_work: {sec: 1, nsec: 184807330}
         gpu_span: {sec: 0, nsec: 199398771}
         period: {sec: 0, nsec: 906646944}
 
@@ -44142,7 +44142,7 @@
         period: {sec: 0, nsec: 994828899}
       - work: {sec: 0, nsec: 934697248}
         span: {sec: 0, nsec: 210275103}
-        gpu_work: {sec: 0, nsec: 1113964114}
+        gpu_work: {sec: 1, nsec: 113964114}
         gpu_span: {sec: 0, nsec: 201094057}
         period: {sec: 0, nsec: 994828899}
 
@@ -44454,7 +44454,7 @@
         period: {sec: 0, nsec: 978370758}
       - work: {sec: 0, nsec: 768409939}
         span: {sec: 0, nsec: 211822896}
-        gpu_work: {sec: 0, nsec: 1113103737}
+        gpu_work: {sec: 1, nsec: 113103737}
         gpu_span: {sec: 0, nsec: 202494507}
         period: {sec: 0, nsec: 978370758}
 
@@ -44584,7 +44584,7 @@
         period: {sec: 0, nsec: 817934017}
       - work: {sec: 0, nsec: 713776612}
         span: {sec: 0, nsec: 184356495}
-        gpu_work: {sec: 0, nsec: 1013256961}
+        gpu_work: {sec: 1, nsec: 13256961}
         gpu_span: {sec: 0, nsec: 172856648}
         period: {sec: 0, nsec: 817934017}
 
@@ -44704,17 +44704,17 @@
         period: {sec: 0, nsec: 994309397}
       - work: {sec: 0, nsec: 659021882}
         span: {sec: 0, nsec: 225336765}
-        gpu_work: {sec: 0, nsec: 1014093508}
+        gpu_work: {sec: 1, nsec: 14093508}
         gpu_span: {sec: 0, nsec: 220236421}
         period: {sec: 0, nsec: 994309397}
       - work: {sec: 0, nsec: 765535640}
         span: {sec: 0, nsec: 225336765}
-        gpu_work: {sec: 0, nsec: 1161233673}
+        gpu_work: {sec: 1, nsec: 161233673}
         gpu_span: {sec: 0, nsec: 220236421}
         period: {sec: 0, nsec: 994309397}
       - work: {sec: 0, nsec: 872049398}
         span: {sec: 0, nsec: 225336765}
-        gpu_work: {sec: 0, nsec: 1308373839}
+        gpu_work: {sec: 1, nsec: 308373839}
         gpu_span: {sec: 0, nsec: 220236421}
         period: {sec: 0, nsec: 994309397}
 
@@ -44896,7 +44896,7 @@
         period: {sec: 0, nsec: 946048008}
       - work: {sec: 0, nsec: 769334480}
         span: {sec: 0, nsec: 184940442}
-        gpu_work: {sec: 0, nsec: 1060046024}
+        gpu_work: {sec: 1, nsec: 60046024}
         gpu_span: {sec: 0, nsec: 181510941}
         period: {sec: 0, nsec: 946048008}
 
@@ -44974,7 +44974,7 @@
         period: {sec: 0, nsec: 853290544}
       - work: {sec: 0, nsec: 799716082}
         span: {sec: 0, nsec: 192522623}
-        gpu_work: {sec: 0, nsec: 1030227848}
+        gpu_work: {sec: 1, nsec: 30227848}
         gpu_span: {sec: 0, nsec: 187097526}
         period: {sec: 0, nsec: 853290544}
 
@@ -45567,12 +45567,12 @@
         period: {sec: 0, nsec: 992881177}
       - work: {sec: 0, nsec: 783111977}
         span: {sec: 0, nsec: 216552927}
-        gpu_work: {sec: 0, nsec: 1106891717}
+        gpu_work: {sec: 1, nsec: 106891717}
         gpu_span: {sec: 0, nsec: 212661219}
         period: {sec: 0, nsec: 992881177}
       - work: {sec: 0, nsec: 917871778}
         span: {sec: 0, nsec: 216552927}
-        gpu_work: {sec: 0, nsec: 1295403337}
+        gpu_work: {sec: 1, nsec: 295403337}
         gpu_span: {sec: 0, nsec: 212661219}
         period: {sec: 0, nsec: 992881177}
 
@@ -45962,7 +45962,7 @@
         period: {sec: 0, nsec: 921074269}
       - work: {sec: 0, nsec: 899751461}
         span: {sec: 0, nsec: 203069873}
-        gpu_work: {sec: 0, nsec: 1146699124}
+        gpu_work: {sec: 1, nsec: 146699124}
         gpu_span: {sec: 0, nsec: 197156251}
         period: {sec: 0, nsec: 921074269}
 
@@ -46014,7 +46014,7 @@
         period: {sec: 0, nsec: 858080298}
       - work: {sec: 0, nsec: 758427720}
         span: {sec: 0, nsec: 197662217}
-        gpu_work: {sec: 0, nsec: 1098105222}
+        gpu_work: {sec: 1, nsec: 98105222}
         gpu_span: {sec: 0, nsec: 201512212}
         period: {sec: 0, nsec: 858080298}
 
@@ -46191,12 +46191,12 @@
         period: {sec: 0, nsec: 979939495}
       - work: {sec: 0, nsec: 722888726}
         span: {sec: 0, nsec: 205042100}
-        gpu_work: {sec: 0, nsec: 1045683825}
+        gpu_work: {sec: 1, nsec: 45683825}
         gpu_span: {sec: 0, nsec: 204976715}
         period: {sec: 0, nsec: 979939495}
       - work: {sec: 0, nsec: 819779733}
         span: {sec: 0, nsec: 205042100}
-        gpu_work: {sec: 0, nsec: 1175812482}
+        gpu_work: {sec: 1, nsec: 175812482}
         gpu_span: {sec: 0, nsec: 204976715}
         period: {sec: 0, nsec: 979939495}
 
@@ -46451,12 +46451,12 @@
         period: {sec: 0, nsec: 983327606}
       - work: {sec: 0, nsec: 764002999}
         span: {sec: 0, nsec: 227503201}
-        gpu_work: {sec: 0, nsec: 1081632164}
+        gpu_work: {sec: 1, nsec: 81632164}
         gpu_span: {sec: 0, nsec: 214892577}
         period: {sec: 0, nsec: 983327606}
       - work: {sec: 0, nsec: 878446356}
         span: {sec: 0, nsec: 227503201}
-        gpu_work: {sec: 0, nsec: 1231960265}
+        gpu_work: {sec: 1, nsec: 231960265}
         gpu_span: {sec: 0, nsec: 214892577}
         period: {sec: 0, nsec: 983327606}
 
@@ -47210,7 +47210,7 @@
         period: {sec: 0, nsec: 999561107}
       - work: {sec: 0, nsec: 771196966}
         span: {sec: 0, nsec: 188305157}
-        gpu_work: {sec: 0, nsec: 1075278041}
+        gpu_work: {sec: 1, nsec: 75278041}
         gpu_span: {sec: 0, nsec: 186640523}
         period: {sec: 0, nsec: 999561107}
 
@@ -47340,7 +47340,7 @@
         period: {sec: 0, nsec: 927722864}
       - work: {sec: 0, nsec: 863082908}
         span: {sec: 0, nsec: 205909503}
-        gpu_work: {sec: 0, nsec: 1120380469}
+        gpu_work: {sec: 1, nsec: 120380469}
         gpu_span: {sec: 0, nsec: 194206745}
         period: {sec: 0, nsec: 927722864}
 
@@ -47418,7 +47418,7 @@
         period: {sec: 0, nsec: 941253171}
       - work: {sec: 0, nsec: 881974368}
         span: {sec: 0, nsec: 195824723}
-        gpu_work: {sec: 0, nsec: 1069157426}
+        gpu_work: {sec: 1, nsec: 69157426}
         gpu_span: {sec: 0, nsec: 195418837}
         period: {sec: 0, nsec: 941253171}
 
@@ -48146,7 +48146,7 @@
         period: {sec: 0, nsec: 940742893}
       - work: {sec: 0, nsec: 846427628}
         span: {sec: 0, nsec: 210144246}
-        gpu_work: {sec: 0, nsec: 1095227032}
+        gpu_work: {sec: 1, nsec: 95227032}
         gpu_span: {sec: 0, nsec: 203196964}
         period: {sec: 0, nsec: 940742893}
 
@@ -48276,7 +48276,7 @@
         period: {sec: 0, nsec: 931244484}
       - work: {sec: 0, nsec: 817434316}
         span: {sec: 0, nsec: 196561008}
-        gpu_work: {sec: 0, nsec: 1093591567}
+        gpu_work: {sec: 1, nsec: 93591567}
         gpu_span: {sec: 0, nsec: 195230146}
         period: {sec: 0, nsec: 931244484}
 
@@ -48380,7 +48380,7 @@
         period: {sec: 0, nsec: 955147154}
       - work: {sec: 0, nsec: 864255475}
         span: {sec: 0, nsec: 205018482}
-        gpu_work: {sec: 0, nsec: 1076758024}
+        gpu_work: {sec: 1, nsec: 76758024}
         gpu_span: {sec: 0, nsec: 175290058}
         period: {sec: 0, nsec: 955147154}
 
@@ -49030,7 +49030,7 @@
         period: {sec: 0, nsec: 946561035}
       - work: {sec: 0, nsec: 720882361}
         span: {sec: 0, nsec: 183630793}
-        gpu_work: {sec: 0, nsec: 1027306128}
+        gpu_work: {sec: 1, nsec: 27306128}
         gpu_span: {sec: 0, nsec: 181363323}
         period: {sec: 0, nsec: 946561035}
 
@@ -49186,7 +49186,7 @@
         period: {sec: 0, nsec: 932085236}
       - work: {sec: 0, nsec: 867687848}
         span: {sec: 0, nsec: 195567998}
-        gpu_work: {sec: 0, nsec: 1025230103}
+        gpu_work: {sec: 1, nsec: 25230103}
         gpu_span: {sec: 0, nsec: 186878027}
         period: {sec: 0, nsec: 932085236}
 
@@ -49654,7 +49654,7 @@
         period: {sec: 0, nsec: 797182696}
       - work: {sec: 0, nsec: 743512120}
         span: {sec: 0, nsec: 185725050}
-        gpu_work: {sec: 0, nsec: 1044301144}
+        gpu_work: {sec: 1, nsec: 44301144}
         gpu_span: {sec: 0, nsec: 176420333}
         period: {sec: 0, nsec: 797182696}
 
@@ -49992,7 +49992,7 @@
         period: {sec: 0, nsec: 927181572}
       - work: {sec: 0, nsec: 720421262}
         span: {sec: 0, nsec: 192222498}
-        gpu_work: {sec: 0, nsec: 1124654239}
+        gpu_work: {sec: 1, nsec: 124654239}
         gpu_span: {sec: 0, nsec: 187724897}
         period: {sec: 0, nsec: 927181572}
 
@@ -50486,7 +50486,7 @@
         period: {sec: 0, nsec: 977400138}
       - work: {sec: 0, nsec: 698407242}
         span: {sec: 0, nsec: 173720004}
-        gpu_work: {sec: 0, nsec: 1023362275}
+        gpu_work: {sec: 1, nsec: 23362275}
         gpu_span: {sec: 0, nsec: 172645295}
         period: {sec: 0, nsec: 977400138}
 
@@ -50512,7 +50512,7 @@
         period: {sec: 0, nsec: 957053758}
       - work: {sec: 0, nsec: 820942508}
         span: {sec: 0, nsec: 187809677}
-        gpu_work: {sec: 0, nsec: 1098812111}
+        gpu_work: {sec: 1, nsec: 98812111}
         gpu_span: {sec: 0, nsec: 187675421}
         period: {sec: 0, nsec: 957053758}
 
@@ -50689,12 +50689,12 @@
         period: {sec: 0, nsec: 985493761}
       - work: {sec: 0, nsec: 732375399}
         span: {sec: 0, nsec: 205269503}
-        gpu_work: {sec: 0, nsec: 1023365707}
+        gpu_work: {sec: 1, nsec: 23365707}
         gpu_span: {sec: 0, nsec: 204212723}
         period: {sec: 0, nsec: 985493761}
       - work: {sec: 0, nsec: 848472895}
         span: {sec: 0, nsec: 205269503}
-        gpu_work: {sec: 0, nsec: 1167512574}
+        gpu_work: {sec: 1, nsec: 167512574}
         gpu_span: {sec: 0, nsec: 204212723}
         period: {sec: 0, nsec: 985493761}
 
@@ -51162,7 +51162,7 @@
         period: {sec: 0, nsec: 882017710}
       - work: {sec: 0, nsec: 840240981}
         span: {sec: 0, nsec: 204442253}
-        gpu_work: {sec: 0, nsec: 1061141116}
+        gpu_work: {sec: 1, nsec: 61141116}
         gpu_span: {sec: 0, nsec: 198016386}
         period: {sec: 0, nsec: 882017710}
 
@@ -52202,7 +52202,7 @@
         period: {sec: 0, nsec: 852359974}
       - work: {sec: 0, nsec: 863366181}
         span: {sec: 0, nsec: 208322460}
-        gpu_work: {sec: 0, nsec: 1087731358}
+        gpu_work: {sec: 1, nsec: 87731358}
         gpu_span: {sec: 0, nsec: 204008303}
         period: {sec: 0, nsec: 852359974}
 
@@ -52436,7 +52436,7 @@
         period: {sec: 0, nsec: 848979253}
       - work: {sec: 0, nsec: 764077163}
         span: {sec: 0, nsec: 192725377}
-        gpu_work: {sec: 0, nsec: 1039703739}
+        gpu_work: {sec: 1, nsec: 39703739}
         gpu_span: {sec: 0, nsec: 183652942}
         period: {sec: 0, nsec: 848979253}
 
@@ -52774,7 +52774,7 @@
         period: {sec: 0, nsec: 900087871}
       - work: {sec: 0, nsec: 681146166}
         span: {sec: 0, nsec: 185367616}
-        gpu_work: {sec: 0, nsec: 1013385738}
+        gpu_work: {sec: 1, nsec: 13385738}
         gpu_span: {sec: 0, nsec: 185412727}
         period: {sec: 0, nsec: 900087871}
 
@@ -53809,12 +53809,12 @@
         period: {sec: 0, nsec: 901881700}
       - work: {sec: 0, nsec: 669412390}
         span: {sec: 0, nsec: 187398216}
-        gpu_work: {sec: 0, nsec: 1023600336}
+        gpu_work: {sec: 1, nsec: 23600336}
         gpu_span: {sec: 0, nsec: 192548157}
         period: {sec: 0, nsec: 901881700}
       - work: {sec: 0, nsec: 767740922}
         span: {sec: 0, nsec: 187398216}
-        gpu_work: {sec: 0, nsec: 1166943448}
+        gpu_work: {sec: 1, nsec: 166943448}
         gpu_span: {sec: 0, nsec: 192548157}
         period: {sec: 0, nsec: 901881700}
 
@@ -54230,7 +54230,7 @@
         period: {sec: 0, nsec: 982673622}
       - work: {sec: 0, nsec: 824624644}
         span: {sec: 0, nsec: 200134046}
-        gpu_work: {sec: 0, nsec: 1022846403}
+        gpu_work: {sec: 1, nsec: 22846403}
         gpu_span: {sec: 0, nsec: 195316568}
         period: {sec: 0, nsec: 982673622}
 
@@ -54823,12 +54823,12 @@
         period: {sec: 0, nsec: 979079054}
       - work: {sec: 0, nsec: 629330771}
         span: {sec: 0, nsec: 204873707}
-        gpu_work: {sec: 0, nsec: 1078099950}
+        gpu_work: {sec: 1, nsec: 78099950}
         gpu_span: {sec: 0, nsec: 203482349}
         period: {sec: 0, nsec: 979079054}
       - work: {sec: 0, nsec: 736298979}
         span: {sec: 0, nsec: 204873707}
-        gpu_work: {sec: 0, nsec: 1247690581}
+        gpu_work: {sec: 1, nsec: 247690581}
         gpu_span: {sec: 0, nsec: 203482349}
         period: {sec: 0, nsec: 979079054}
 
@@ -54854,7 +54854,7 @@
         period: {sec: 0, nsec: 967653331}
       - work: {sec: 0, nsec: 699311607}
         span: {sec: 0, nsec: 184734616}
-        gpu_work: {sec: 0, nsec: 1069274873}
+        gpu_work: {sec: 1, nsec: 69274873}
         gpu_span: {sec: 0, nsec: 180798288}
         period: {sec: 0, nsec: 967653331}
 
@@ -54880,7 +54880,7 @@
         period: {sec: 0, nsec: 857018585}
       - work: {sec: 0, nsec: 794813584}
         span: {sec: 0, nsec: 195596433}
-        gpu_work: {sec: 0, nsec: 1117722113}
+        gpu_work: {sec: 1, nsec: 117722113}
         gpu_span: {sec: 0, nsec: 194819615}
         period: {sec: 0, nsec: 857018585}
 
@@ -55062,7 +55062,7 @@
         period: {sec: 0, nsec: 802448790}
       - work: {sec: 0, nsec: 697880473}
         span: {sec: 0, nsec: 186480510}
-        gpu_work: {sec: 0, nsec: 1035201965}
+        gpu_work: {sec: 1, nsec: 35201965}
         gpu_span: {sec: 0, nsec: 180214410}
         period: {sec: 0, nsec: 802448790}
 
@@ -55452,7 +55452,7 @@
         period: {sec: 0, nsec: 868821471}
       - work: {sec: 0, nsec: 781531582}
         span: {sec: 0, nsec: 194752231}
-        gpu_work: {sec: 0, nsec: 1127253376}
+        gpu_work: {sec: 1, nsec: 127253376}
         gpu_span: {sec: 0, nsec: 193503580}
         period: {sec: 0, nsec: 868821471}
 
@@ -55634,7 +55634,7 @@
         period: {sec: 0, nsec: 898138638}
       - work: {sec: 0, nsec: 750420730}
         span: {sec: 0, nsec: 183718079}
-        gpu_work: {sec: 0, nsec: 1039901105}
+        gpu_work: {sec: 1, nsec: 39901105}
         gpu_span: {sec: 0, nsec: 181004210}
         period: {sec: 0, nsec: 898138638}
 
@@ -55707,12 +55707,12 @@
         period: {sec: 0, nsec: 922016597}
       - work: {sec: 0, nsec: 708246273}
         span: {sec: 0, nsec: 199297500}
-        gpu_work: {sec: 0, nsec: 1048932229}
+        gpu_work: {sec: 1, nsec: 48932229}
         gpu_span: {sec: 0, nsec: 203356463}
         period: {sec: 0, nsec: 922016597}
       - work: {sec: 0, nsec: 824111508}
         span: {sec: 0, nsec: 199297500}
-        gpu_work: {sec: 0, nsec: 1176908877}
+        gpu_work: {sec: 1, nsec: 176908877}
         gpu_span: {sec: 0, nsec: 203356463}
         period: {sec: 0, nsec: 922016597}
 
@@ -56097,12 +56097,12 @@
         period: {sec: 0, nsec: 990221547}
       - work: {sec: 0, nsec: 705552099}
         span: {sec: 0, nsec: 196488428}
-        gpu_work: {sec: 0, nsec: 1026048767}
+        gpu_work: {sec: 1, nsec: 26048767}
         gpu_span: {sec: 0, nsec: 194962692}
         period: {sec: 0, nsec: 990221547}
       - work: {sec: 0, nsec: 813411321}
         span: {sec: 0, nsec: 196488428}
-        gpu_work: {sec: 0, nsec: 1155666443}
+        gpu_work: {sec: 1, nsec: 155666443}
         gpu_span: {sec: 0, nsec: 194962692}
         period: {sec: 0, nsec: 990221547}
 
@@ -56305,12 +56305,12 @@
         period: {sec: 0, nsec: 937484178}
       - work: {sec: 0, nsec: 730494203}
         span: {sec: 0, nsec: 194382402}
-        gpu_work: {sec: 0, nsec: 1004417366}
+        gpu_work: {sec: 1, nsec: 4417366}
         gpu_span: {sec: 0, nsec: 196390754}
         period: {sec: 0, nsec: 937484178}
       - work: {sec: 0, nsec: 842839883}
         span: {sec: 0, nsec: 194382402}
-        gpu_work: {sec: 0, nsec: 1127503605}
+        gpu_work: {sec: 1, nsec: 127503605}
         gpu_span: {sec: 0, nsec: 196390754}
         period: {sec: 0, nsec: 937484178}
 
@@ -56986,7 +56986,7 @@
         period: {sec: 0, nsec: 906658874}
       - work: {sec: 0, nsec: 796882016}
         span: {sec: 0, nsec: 196430470}
-        gpu_work: {sec: 0, nsec: 1127865742}
+        gpu_work: {sec: 1, nsec: 127865742}
         gpu_span: {sec: 0, nsec: 196429211}
         period: {sec: 0, nsec: 906658874}
 
@@ -57605,12 +57605,12 @@
         period: {sec: 0, nsec: 973231945}
       - work: {sec: 0, nsec: 696345781}
         span: {sec: 0, nsec: 199270628}
-        gpu_work: {sec: 0, nsec: 1089815709}
+        gpu_work: {sec: 1, nsec: 89815709}
         gpu_span: {sec: 0, nsec: 198099825}
         period: {sec: 0, nsec: 973231945}
       - work: {sec: 0, nsec: 815564015}
         span: {sec: 0, nsec: 199270628}
-        gpu_work: {sec: 0, nsec: 1256855144}
+        gpu_work: {sec: 1, nsec: 256855144}
         gpu_span: {sec: 0, nsec: 198099825}
         period: {sec: 0, nsec: 973231945}
 
@@ -58702,7 +58702,7 @@
         period: {sec: 0, nsec: 939528975}
       - work: {sec: 0, nsec: 738876683}
         span: {sec: 0, nsec: 177612793}
-        gpu_work: {sec: 0, nsec: 1069461764}
+        gpu_work: {sec: 1, nsec: 69461764}
         gpu_span: {sec: 0, nsec: 178869879}
         period: {sec: 0, nsec: 939528975}
 
@@ -58832,7 +58832,7 @@
         period: {sec: 0, nsec: 886896235}
       - work: {sec: 0, nsec: 719382815}
         span: {sec: 0, nsec: 186781382}
-        gpu_work: {sec: 0, nsec: 1103662308}
+        gpu_work: {sec: 1, nsec: 103662308}
         gpu_span: {sec: 0, nsec: 190844960}
         period: {sec: 0, nsec: 886896235}
 
@@ -59014,7 +59014,7 @@
         period: {sec: 0, nsec: 817102098}
       - work: {sec: 0, nsec: 670532869}
         span: {sec: 0, nsec: 179964581}
-        gpu_work: {sec: 0, nsec: 1020231269}
+        gpu_work: {sec: 1, nsec: 20231269}
         gpu_span: {sec: 0, nsec: 181015259}
         period: {sec: 0, nsec: 817102098}
 
@@ -59092,7 +59092,7 @@
         period: {sec: 0, nsec: 943477719}
       - work: {sec: 0, nsec: 710250033}
         span: {sec: 0, nsec: 194486513}
-        gpu_work: {sec: 0, nsec: 1058085891}
+        gpu_work: {sec: 1, nsec: 58085891}
         gpu_span: {sec: 0, nsec: 190758658}
         period: {sec: 0, nsec: 943477719}
 
@@ -59430,7 +59430,7 @@
         period: {sec: 0, nsec: 913549473}
       - work: {sec: 0, nsec: 807542965}
         span: {sec: 0, nsec: 198596400}
-        gpu_work: {sec: 0, nsec: 1109905274}
+        gpu_work: {sec: 1, nsec: 109905274}
         gpu_span: {sec: 0, nsec: 200129425}
         period: {sec: 0, nsec: 913549473}
 
@@ -59997,12 +59997,12 @@
         period: {sec: 0, nsec: 994628621}
       - work: {sec: 0, nsec: 806913514}
         span: {sec: 0, nsec: 223063058}
-        gpu_work: {sec: 0, nsec: 1133002374}
+        gpu_work: {sec: 1, nsec: 133002374}
         gpu_span: {sec: 0, nsec: 211485891}
         period: {sec: 0, nsec: 994628621}
       - work: {sec: 0, nsec: 940456578}
         span: {sec: 0, nsec: 223063058}
-        gpu_work: {sec: 0, nsec: 1316767141}
+        gpu_work: {sec: 1, nsec: 316767141}
         gpu_span: {sec: 0, nsec: 211485891}
         period: {sec: 0, nsec: 994628621}
 
@@ -60028,7 +60028,7 @@
         period: {sec: 0, nsec: 933720099}
       - work: {sec: 0, nsec: 758111134}
         span: {sec: 0, nsec: 182918434}
-        gpu_work: {sec: 0, nsec: 1040928784}
+        gpu_work: {sec: 1, nsec: 40928784}
         gpu_span: {sec: 0, nsec: 183527130}
         period: {sec: 0, nsec: 933720099}
 
@@ -60465,12 +60465,12 @@
         period: {sec: 0, nsec: 902570341}
       - work: {sec: 0, nsec: 740670404}
         span: {sec: 0, nsec: 210723043}
-        gpu_work: {sec: 0, nsec: 1035436293}
+        gpu_work: {sec: 1, nsec: 35436293}
         gpu_span: {sec: 0, nsec: 192569134}
         period: {sec: 0, nsec: 902570341}
       - work: {sec: 0, nsec: 856921594}
         span: {sec: 0, nsec: 210723043}
-        gpu_work: {sec: 0, nsec: 1198634533}
+        gpu_work: {sec: 1, nsec: 198634533}
         gpu_span: {sec: 0, nsec: 192569134}
         period: {sec: 0, nsec: 902570341}
 
@@ -60621,12 +60621,12 @@
         period: {sec: 0, nsec: 900952233}
       - work: {sec: 0, nsec: 759074053}
         span: {sec: 0, nsec: 203627154}
-        gpu_work: {sec: 0, nsec: 1036104941}
+        gpu_work: {sec: 1, nsec: 36104941}
         gpu_span: {sec: 0, nsec: 198748141}
         period: {sec: 0, nsec: 900952233}
       - work: {sec: 0, nsec: 878809889}
         span: {sec: 0, nsec: 203627154}
-        gpu_work: {sec: 0, nsec: 1186022210}
+        gpu_work: {sec: 1, nsec: 186022210}
         gpu_span: {sec: 0, nsec: 198748141}
         period: {sec: 0, nsec: 900952233}
 
@@ -60990,7 +60990,7 @@
         period: {sec: 0, nsec: 998606831}
       - work: {sec: 0, nsec: 839866901}
         span: {sec: 0, nsec: 198106759}
-        gpu_work: {sec: 0, nsec: 1024031161}
+        gpu_work: {sec: 1, nsec: 24031161}
         gpu_span: {sec: 0, nsec: 184577803}
         period: {sec: 0, nsec: 998606831}
 
@@ -61172,7 +61172,7 @@
         period: {sec: 0, nsec: 932893532}
       - work: {sec: 0, nsec: 699210785}
         span: {sec: 0, nsec: 177324519}
-        gpu_work: {sec: 0, nsec: 1010638464}
+        gpu_work: {sec: 1, nsec: 10638464}
         gpu_span: {sec: 0, nsec: 178228197}
         period: {sec: 0, nsec: 932893532}
 
@@ -61250,7 +61250,7 @@
         period: {sec: 0, nsec: 821376909}
       - work: {sec: 0, nsec: 782428632}
         span: {sec: 0, nsec: 197023132}
-        gpu_work: {sec: 0, nsec: 1003010961}
+        gpu_work: {sec: 1, nsec: 3010961}
         gpu_span: {sec: 0, nsec: 192046104}
         period: {sec: 0, nsec: 821376909}
 
@@ -61432,7 +61432,7 @@
         period: {sec: 0, nsec: 978259511}
       - work: {sec: 0, nsec: 745216658}
         span: {sec: 0, nsec: 175917714}
-        gpu_work: {sec: 0, nsec: 1093359547}
+        gpu_work: {sec: 1, nsec: 93359547}
         gpu_span: {sec: 0, nsec: 185082232}
         period: {sec: 0, nsec: 978259511}
 
@@ -61713,12 +61713,12 @@
         period: {sec: 0, nsec: 995408364}
       - work: {sec: 0, nsec: 811512544}
         span: {sec: 0, nsec: 213797931}
-        gpu_work: {sec: 0, nsec: 1074294174}
+        gpu_work: {sec: 1, nsec: 74294174}
         gpu_span: {sec: 0, nsec: 208946076}
         period: {sec: 0, nsec: 995408364}
       - work: {sec: 0, nsec: 916447674}
         span: {sec: 0, nsec: 213797931}
-        gpu_work: {sec: 0, nsec: 1230198641}
+        gpu_work: {sec: 1, nsec: 230198641}
         gpu_span: {sec: 0, nsec: 208946076}
         period: {sec: 0, nsec: 995408364}
 
@@ -62108,7 +62108,7 @@
         period: {sec: 0, nsec: 998615155}
       - work: {sec: 0, nsec: 802785762}
         span: {sec: 0, nsec: 189253680}
-        gpu_work: {sec: 0, nsec: 1081446706}
+        gpu_work: {sec: 1, nsec: 81446706}
         gpu_span: {sec: 0, nsec: 183282897}
         period: {sec: 0, nsec: 998615155}
 
@@ -62212,7 +62212,7 @@
         period: {sec: 0, nsec: 999186803}
       - work: {sec: 0, nsec: 830874112}
         span: {sec: 0, nsec: 202275432}
-        gpu_work: {sec: 0, nsec: 1128185650}
+        gpu_work: {sec: 1, nsec: 128185650}
         gpu_span: {sec: 0, nsec: 198693168}
         period: {sec: 0, nsec: 999186803}
 
@@ -62810,7 +62810,7 @@
         period: {sec: 0, nsec: 971204589}
       - work: {sec: 0, nsec: 795645092}
         span: {sec: 0, nsec: 206188574}
-        gpu_work: {sec: 0, nsec: 1115626709}
+        gpu_work: {sec: 1, nsec: 115626709}
         gpu_span: {sec: 0, nsec: 196049897}
         period: {sec: 0, nsec: 971204589}
 
@@ -63559,12 +63559,12 @@
         period: {sec: 0, nsec: 924881751}
       - work: {sec: 0, nsec: 850953739}
         span: {sec: 0, nsec: 227531277}
-        gpu_work: {sec: 0, nsec: 1016837919}
+        gpu_work: {sec: 1, nsec: 16837919}
         gpu_span: {sec: 0, nsec: 211553549}
         period: {sec: 0, nsec: 924881751}
       - work: {sec: 0, nsec: 983885712}
         span: {sec: 0, nsec: 227531277}
-        gpu_work: {sec: 0, nsec: 1183828813}
+        gpu_work: {sec: 1, nsec: 183828813}
         gpu_span: {sec: 0, nsec: 211553549}
         period: {sec: 0, nsec: 924881751}
 
@@ -63611,12 +63611,12 @@
         period: {sec: 0, nsec: 985562237}
       - work: {sec: 0, nsec: 705162628}
         span: {sec: 0, nsec: 198132764}
-        gpu_work: {sec: 0, nsec: 1017008808}
+        gpu_work: {sec: 1, nsec: 17008808}
         gpu_span: {sec: 0, nsec: 190335223}
         period: {sec: 0, nsec: 985562237}
       - work: {sec: 0, nsec: 796625754}
         span: {sec: 0, nsec: 198132764}
-        gpu_work: {sec: 0, nsec: 1159032891}
+        gpu_work: {sec: 1, nsec: 159032891}
         gpu_span: {sec: 0, nsec: 190335223}
         period: {sec: 0, nsec: 985562237}
 
@@ -63720,7 +63720,7 @@
         period: {sec: 0, nsec: 960612094}
       - work: {sec: 0, nsec: 668253299}
         span: {sec: 0, nsec: 170460237}
-        gpu_work: {sec: 0, nsec: 1032019946}
+        gpu_work: {sec: 1, nsec: 32019946}
         gpu_span: {sec: 0, nsec: 166292390}
         period: {sec: 0, nsec: 960612094}
 
@@ -63741,12 +63741,12 @@
         period: {sec: 0, nsec: 872095125}
       - work: {sec: 0, nsec: 808578472}
         span: {sec: 0, nsec: 209217919}
-        gpu_work: {sec: 0, nsec: 1003364270}
+        gpu_work: {sec: 1, nsec: 3364270}
         gpu_span: {sec: 0, nsec: 197611144}
         period: {sec: 0, nsec: 872095125}
       - work: {sec: 0, nsec: 927276893}
         span: {sec: 0, nsec: 209217919}
-        gpu_work: {sec: 0, nsec: 1134332219}
+        gpu_work: {sec: 1, nsec: 134332219}
         gpu_span: {sec: 0, nsec: 197611144}
         period: {sec: 0, nsec: 872095125}
 
@@ -64365,12 +64365,12 @@
         period: {sec: 0, nsec: 980711259}
       - work: {sec: 0, nsec: 757508604}
         span: {sec: 0, nsec: 219468524}
-        gpu_work: {sec: 0, nsec: 1042520914}
+        gpu_work: {sec: 1, nsec: 42520914}
         gpu_span: {sec: 0, nsec: 209511996}
         period: {sec: 0, nsec: 980711259}
       - work: {sec: 0, nsec: 871744284}
         span: {sec: 0, nsec: 219468524}
-        gpu_work: {sec: 0, nsec: 1210513246}
+        gpu_work: {sec: 1, nsec: 210513246}
         gpu_span: {sec: 0, nsec: 209511996}
         period: {sec: 0, nsec: 980711259}
 
@@ -64911,12 +64911,12 @@
         period: {sec: 0, nsec: 942427434}
       - work: {sec: 0, nsec: 768124974}
         span: {sec: 0, nsec: 212695744}
-        gpu_work: {sec: 0, nsec: 1103650277}
+        gpu_work: {sec: 1, nsec: 103650277}
         gpu_span: {sec: 0, nsec: 212941202}
         period: {sec: 0, nsec: 942427434}
       - work: {sec: 0, nsec: 899353520}
         span: {sec: 0, nsec: 212695744}
-        gpu_work: {sec: 0, nsec: 1244547461}
+        gpu_work: {sec: 1, nsec: 244547461}
         gpu_span: {sec: 0, nsec: 212941202}
         period: {sec: 0, nsec: 942427434}
 
@@ -65124,7 +65124,7 @@
         period: {sec: 0, nsec: 868643060}
       - work: {sec: 0, nsec: 691310393}
         span: {sec: 0, nsec: 196635996}
-        gpu_work: {sec: 0, nsec: 1032507822}
+        gpu_work: {sec: 1, nsec: 32507822}
         gpu_span: {sec: 0, nsec: 202975175}
         period: {sec: 0, nsec: 868643060}
 
@@ -65145,12 +65145,12 @@
         period: {sec: 0, nsec: 968584085}
       - work: {sec: 0, nsec: 716428931}
         span: {sec: 0, nsec: 203978798}
-        gpu_work: {sec: 0, nsec: 1078283612}
+        gpu_work: {sec: 1, nsec: 78283612}
         gpu_span: {sec: 0, nsec: 200227195}
         period: {sec: 0, nsec: 968584085}
       - work: {sec: 0, nsec: 832775405}
         span: {sec: 0, nsec: 203978798}
-        gpu_work: {sec: 0, nsec: 1254761771}
+        gpu_work: {sec: 1, nsec: 254761771}
         gpu_span: {sec: 0, nsec: 200227195}
         period: {sec: 0, nsec: 968584085}
 
@@ -65384,7 +65384,7 @@
         period: {sec: 0, nsec: 940758063}
       - work: {sec: 0, nsec: 696113547}
         span: {sec: 0, nsec: 185575252}
-        gpu_work: {sec: 0, nsec: 1084660447}
+        gpu_work: {sec: 1, nsec: 84660447}
         gpu_span: {sec: 0, nsec: 186863353}
         period: {sec: 0, nsec: 940758063}
 
@@ -65587,12 +65587,12 @@
         period: {sec: 0, nsec: 996188746}
       - work: {sec: 0, nsec: 784904284}
         span: {sec: 0, nsec: 199892354}
-        gpu_work: {sec: 0, nsec: 1049934206}
+        gpu_work: {sec: 1, nsec: 49934206}
         gpu_span: {sec: 0, nsec: 199391256}
         period: {sec: 0, nsec: 996188746}
       - work: {sec: 0, nsec: 899097829}
         span: {sec: 0, nsec: 199892354}
-        gpu_work: {sec: 0, nsec: 1211896162}
+        gpu_work: {sec: 1, nsec: 211896162}
         gpu_span: {sec: 0, nsec: 199391256}
         period: {sec: 0, nsec: 996188746}
 
@@ -65618,7 +65618,7 @@
         period: {sec: 0, nsec: 871606395}
       - work: {sec: 0, nsec: 878094867}
         span: {sec: 0, nsec: 215579433}
-        gpu_work: {sec: 0, nsec: 1035796185}
+        gpu_work: {sec: 1, nsec: 35796185}
         gpu_span: {sec: 0, nsec: 206410656}
         period: {sec: 0, nsec: 871606395}
 
@@ -66008,7 +66008,7 @@
         period: {sec: 0, nsec: 905042718}
       - work: {sec: 0, nsec: 814949598}
         span: {sec: 0, nsec: 197281224}
-        gpu_work: {sec: 0, nsec: 1034918986}
+        gpu_work: {sec: 1, nsec: 34918986}
         gpu_span: {sec: 0, nsec: 183276675}
         period: {sec: 0, nsec: 905042718}
 
@@ -66034,7 +66034,7 @@
         period: {sec: 0, nsec: 948954571}
       - work: {sec: 0, nsec: 874170501}
         span: {sec: 0, nsec: 204949635}
-        gpu_work: {sec: 0, nsec: 1099122746}
+        gpu_work: {sec: 1, nsec: 99122746}
         gpu_span: {sec: 0, nsec: 193402347}
         period: {sec: 0, nsec: 948954571}
 
@@ -66216,7 +66216,7 @@
         period: {sec: 0, nsec: 876380875}
       - work: {sec: 0, nsec: 874116258}
         span: {sec: 0, nsec: 195493058}
-        gpu_work: {sec: 0, nsec: 1117729434}
+        gpu_work: {sec: 1, nsec: 117729434}
         gpu_span: {sec: 0, nsec: 183990612}
         period: {sec: 0, nsec: 876380875}
 
@@ -66263,12 +66263,12 @@
         period: {sec: 0, nsec: 999839192}
       - work: {sec: 0, nsec: 884392882}
         span: {sec: 0, nsec: 236037912}
-        gpu_work: {sec: 0, nsec: 1136752229}
+        gpu_work: {sec: 1, nsec: 136752229}
         gpu_span: {sec: 0, nsec: 229553790}
         period: {sec: 0, nsec: 999839192}
-      - work: {sec: 0, nsec: 1007581814}
+      - work: {sec: 1, nsec: 7581814}
         span: {sec: 0, nsec: 236037912}
-        gpu_work: {sec: 0, nsec: 1282846071}
+        gpu_work: {sec: 1, nsec: 282846071}
         gpu_span: {sec: 0, nsec: 229553790}
         period: {sec: 0, nsec: 999839192}
 
@@ -66528,7 +66528,7 @@
         period: {sec: 0, nsec: 892771617}
       - work: {sec: 0, nsec: 783843553}
         span: {sec: 0, nsec: 189326966}
-        gpu_work: {sec: 0, nsec: 1097519032}
+        gpu_work: {sec: 1, nsec: 97519032}
         gpu_span: {sec: 0, nsec: 181914900}
         period: {sec: 0, nsec: 892771617}
 
@@ -66632,7 +66632,7 @@
         period: {sec: 0, nsec: 895540414}
       - work: {sec: 0, nsec: 912028413}
         span: {sec: 0, nsec: 227381093}
-        gpu_work: {sec: 0, nsec: 1108868960}
+        gpu_work: {sec: 1, nsec: 108868960}
         gpu_span: {sec: 0, nsec: 214633516}
         period: {sec: 0, nsec: 895540414}
 
@@ -66762,7 +66762,7 @@
         period: {sec: 0, nsec: 876582641}
       - work: {sec: 0, nsec: 701315983}
         span: {sec: 0, nsec: 166229009}
-        gpu_work: {sec: 0, nsec: 1040780341}
+        gpu_work: {sec: 1, nsec: 40780341}
         gpu_span: {sec: 0, nsec: 163627349}
         period: {sec: 0, nsec: 876582641}
 
@@ -66996,7 +66996,7 @@
         period: {sec: 0, nsec: 859010040}
       - work: {sec: 0, nsec: 791811854}
         span: {sec: 0, nsec: 198487195}
-        gpu_work: {sec: 0, nsec: 1063360724}
+        gpu_work: {sec: 1, nsec: 63360724}
         gpu_span: {sec: 0, nsec: 194741241}
         period: {sec: 0, nsec: 859010040}
 
@@ -67204,7 +67204,7 @@
         period: {sec: 0, nsec: 877204203}
       - work: {sec: 0, nsec: 710964475}
         span: {sec: 0, nsec: 183245341}
-        gpu_work: {sec: 0, nsec: 1130511971}
+        gpu_work: {sec: 1, nsec: 130511971}
         gpu_span: {sec: 0, nsec: 184498547}
         period: {sec: 0, nsec: 877204203}
 
@@ -67412,7 +67412,7 @@
         period: {sec: 0, nsec: 901665805}
       - work: {sec: 0, nsec: 718848675}
         span: {sec: 0, nsec: 187044128}
-        gpu_work: {sec: 0, nsec: 1050954121}
+        gpu_work: {sec: 1, nsec: 50954121}
         gpu_span: {sec: 0, nsec: 188236504}
         period: {sec: 0, nsec: 901665805}
 
@@ -67620,7 +67620,7 @@
         period: {sec: 0, nsec: 931979741}
       - work: {sec: 0, nsec: 827187604}
         span: {sec: 0, nsec: 192486683}
-        gpu_work: {sec: 0, nsec: 1084300007}
+        gpu_work: {sec: 1, nsec: 84300007}
         gpu_span: {sec: 0, nsec: 190467226}
         period: {sec: 0, nsec: 931979741}
 
@@ -67854,7 +67854,7 @@
         period: {sec: 0, nsec: 846639414}
       - work: {sec: 0, nsec: 751399320}
         span: {sec: 0, nsec: 193479444}
-        gpu_work: {sec: 0, nsec: 1010286992}
+        gpu_work: {sec: 1, nsec: 10286992}
         gpu_span: {sec: 0, nsec: 181916001}
         period: {sec: 0, nsec: 846639414}
 
@@ -68166,7 +68166,7 @@
         period: {sec: 0, nsec: 904913951}
       - work: {sec: 0, nsec: 996858909}
         span: {sec: 0, nsec: 208543975}
-        gpu_work: {sec: 0, nsec: 1122212345}
+        gpu_work: {sec: 1, nsec: 122212345}
         gpu_span: {sec: 0, nsec: 199214163}
         period: {sec: 0, nsec: 904913951}
 
@@ -68556,7 +68556,7 @@
         period: {sec: 0, nsec: 837393315}
       - work: {sec: 0, nsec: 824485147}
         span: {sec: 0, nsec: 196928433}
-        gpu_work: {sec: 0, nsec: 1051444606}
+        gpu_work: {sec: 1, nsec: 51444606}
         gpu_span: {sec: 0, nsec: 184527180}
         period: {sec: 0, nsec: 837393315}
 
@@ -69050,7 +69050,7 @@
         period: {sec: 0, nsec: 817467124}
       - work: {sec: 0, nsec: 770617635}
         span: {sec: 0, nsec: 194212682}
-        gpu_work: {sec: 0, nsec: 1054976882}
+        gpu_work: {sec: 1, nsec: 54976882}
         gpu_span: {sec: 0, nsec: 189334028}
         period: {sec: 0, nsec: 817467124}
 
@@ -69258,7 +69258,7 @@
         period: {sec: 0, nsec: 982235002}
       - work: {sec: 0, nsec: 633422222}
         span: {sec: 0, nsec: 178302018}
-        gpu_work: {sec: 0, nsec: 1135608527}
+        gpu_work: {sec: 1, nsec: 135608527}
         gpu_span: {sec: 0, nsec: 170697808}
         period: {sec: 0, nsec: 982235002}
 
@@ -69986,7 +69986,7 @@
         period: {sec: 0, nsec: 978600381}
       - work: {sec: 0, nsec: 819154293}
         span: {sec: 0, nsec: 194408933}
-        gpu_work: {sec: 0, nsec: 1093591485}
+        gpu_work: {sec: 1, nsec: 93591485}
         gpu_span: {sec: 0, nsec: 191675876}
         period: {sec: 0, nsec: 978600381}
 
@@ -70584,7 +70584,7 @@
         period: {sec: 0, nsec: 843313676}
       - work: {sec: 0, nsec: 703670154}
         span: {sec: 0, nsec: 175426280}
-        gpu_work: {sec: 0, nsec: 1003445436}
+        gpu_work: {sec: 1, nsec: 3445436}
         gpu_span: {sec: 0, nsec: 177911369}
         period: {sec: 0, nsec: 843313676}
 
@@ -71260,7 +71260,7 @@
         period: {sec: 0, nsec: 944866772}
       - work: {sec: 0, nsec: 717967903}
         span: {sec: 0, nsec: 176941778}
-        gpu_work: {sec: 0, nsec: 1000833489}
+        gpu_work: {sec: 1, nsec: 833489}
         gpu_span: {sec: 0, nsec: 172916049}
         period: {sec: 0, nsec: 944866772}
 
@@ -71442,7 +71442,7 @@
         period: {sec: 0, nsec: 954327180}
       - work: {sec: 0, nsec: 743033419}
         span: {sec: 0, nsec: 187060675}
-        gpu_work: {sec: 0, nsec: 1068724938}
+        gpu_work: {sec: 1, nsec: 68724938}
         gpu_span: {sec: 0, nsec: 187660794}
         period: {sec: 0, nsec: 954327180}
 
@@ -72352,7 +72352,7 @@
         period: {sec: 0, nsec: 904148665}
       - work: {sec: 0, nsec: 836891048}
         span: {sec: 0, nsec: 183810928}
-        gpu_work: {sec: 0, nsec: 1072053534}
+        gpu_work: {sec: 1, nsec: 72053534}
         gpu_span: {sec: 0, nsec: 173375742}
         period: {sec: 0, nsec: 904148665}
 
@@ -72482,7 +72482,7 @@
         period: {sec: 0, nsec: 916477465}
       - work: {sec: 0, nsec: 769205102}
         span: {sec: 0, nsec: 182101874}
-        gpu_work: {sec: 0, nsec: 1042971847}
+        gpu_work: {sec: 1, nsec: 42971847}
         gpu_span: {sec: 0, nsec: 179576954}
         period: {sec: 0, nsec: 916477465}
 
@@ -72555,12 +72555,12 @@
         period: {sec: 0, nsec: 941336182}
       - work: {sec: 0, nsec: 720250754}
         span: {sec: 0, nsec: 209580731}
-        gpu_work: {sec: 0, nsec: 1022211477}
+        gpu_work: {sec: 1, nsec: 22211477}
         gpu_span: {sec: 0, nsec: 192589429}
         period: {sec: 0, nsec: 941336182}
       - work: {sec: 0, nsec: 844317064}
         span: {sec: 0, nsec: 209580731}
-        gpu_work: {sec: 0, nsec: 1195757851}
+        gpu_work: {sec: 1, nsec: 195757851}
         gpu_span: {sec: 0, nsec: 192589429}
         period: {sec: 0, nsec: 941336182}
 
@@ -72945,12 +72945,12 @@
         period: {sec: 0, nsec: 925083563}
       - work: {sec: 0, nsec: 722466665}
         span: {sec: 0, nsec: 204097869}
-        gpu_work: {sec: 0, nsec: 1087625487}
+        gpu_work: {sec: 1, nsec: 87625487}
         gpu_span: {sec: 0, nsec: 203106366}
         period: {sec: 0, nsec: 925083563}
       - work: {sec: 0, nsec: 832171224}
         span: {sec: 0, nsec: 204097869}
-        gpu_work: {sec: 0, nsec: 1236061190}
+        gpu_work: {sec: 1, nsec: 236061190}
         gpu_span: {sec: 0, nsec: 203106366}
         period: {sec: 0, nsec: 925083563}
 
@@ -73023,12 +73023,12 @@
         period: {sec: 0, nsec: 983654556}
       - work: {sec: 0, nsec: 801385626}
         span: {sec: 0, nsec: 210186793}
-        gpu_work: {sec: 0, nsec: 1030511379}
+        gpu_work: {sec: 1, nsec: 30511379}
         gpu_span: {sec: 0, nsec: 209243398}
         period: {sec: 0, nsec: 983654556}
       - work: {sec: 0, nsec: 937695218}
         span: {sec: 0, nsec: 210186793}
-        gpu_work: {sec: 0, nsec: 1160617738}
+        gpu_work: {sec: 1, nsec: 160617738}
         gpu_span: {sec: 0, nsec: 209243398}
         period: {sec: 0, nsec: 983654556}
 
@@ -73210,7 +73210,7 @@
         period: {sec: 0, nsec: 941724958}
       - work: {sec: 0, nsec: 710586549}
         span: {sec: 0, nsec: 203364493}
-        gpu_work: {sec: 0, nsec: 1129827910}
+        gpu_work: {sec: 1, nsec: 129827910}
         gpu_span: {sec: 0, nsec: 205157193}
         period: {sec: 0, nsec: 941724958}
 
@@ -73288,7 +73288,7 @@
         period: {sec: 0, nsec: 948888264}
       - work: {sec: 0, nsec: 781590169}
         span: {sec: 0, nsec: 196584146}
-        gpu_work: {sec: 0, nsec: 1069379038}
+        gpu_work: {sec: 1, nsec: 69379038}
         gpu_span: {sec: 0, nsec: 185525302}
         period: {sec: 0, nsec: 948888264}
 
@@ -73314,7 +73314,7 @@
         period: {sec: 0, nsec: 943724620}
       - work: {sec: 0, nsec: 707885122}
         span: {sec: 0, nsec: 185509306}
-        gpu_work: {sec: 0, nsec: 1045118491}
+        gpu_work: {sec: 1, nsec: 45118491}
         gpu_span: {sec: 0, nsec: 175558687}
         period: {sec: 0, nsec: 943724620}
 
@@ -73595,12 +73595,12 @@
         period: {sec: 0, nsec: 920018419}
       - work: {sec: 0, nsec: 806281391}
         span: {sec: 0, nsec: 221333333}
-        gpu_work: {sec: 0, nsec: 1027386420}
+        gpu_work: {sec: 1, nsec: 27386420}
         gpu_span: {sec: 0, nsec: 210324952}
         period: {sec: 0, nsec: 920018419}
       - work: {sec: 0, nsec: 930661013}
         span: {sec: 0, nsec: 221333333}
-        gpu_work: {sec: 0, nsec: 1181967198}
+        gpu_work: {sec: 1, nsec: 181967198}
         gpu_span: {sec: 0, nsec: 210324952}
         period: {sec: 0, nsec: 920018419}
 
@@ -74167,12 +74167,12 @@
         period: {sec: 0, nsec: 941168694}
       - work: {sec: 0, nsec: 647877862}
         span: {sec: 0, nsec: 202715564}
-        gpu_work: {sec: 0, nsec: 1062253068}
+        gpu_work: {sec: 1, nsec: 62253068}
         gpu_span: {sec: 0, nsec: 202739274}
         period: {sec: 0, nsec: 941168694}
       - work: {sec: 0, nsec: 751819554}
         span: {sec: 0, nsec: 202715564}
-        gpu_work: {sec: 0, nsec: 1171749341}
+        gpu_work: {sec: 1, nsec: 171749341}
         gpu_span: {sec: 0, nsec: 202739274}
         period: {sec: 0, nsec: 941168694}
 
@@ -74302,7 +74302,7 @@
         period: {sec: 0, nsec: 937485743}
       - work: {sec: 0, nsec: 787893933}
         span: {sec: 0, nsec: 191730505}
-        gpu_work: {sec: 0, nsec: 1067405038}
+        gpu_work: {sec: 1, nsec: 67405038}
         gpu_span: {sec: 0, nsec: 190707493}
         period: {sec: 0, nsec: 937485743}
 
@@ -74458,7 +74458,7 @@
         period: {sec: 0, nsec: 848762167}
       - work: {sec: 0, nsec: 858402459}
         span: {sec: 0, nsec: 204866777}
-        gpu_work: {sec: 0, nsec: 1066304670}
+        gpu_work: {sec: 1, nsec: 66304670}
         gpu_span: {sec: 0, nsec: 198795757}
         period: {sec: 0, nsec: 848762167}
 
@@ -74713,12 +74713,12 @@
         period: {sec: 0, nsec: 995663533}
       - work: {sec: 0, nsec: 738248848}
         span: {sec: 0, nsec: 196089208}
-        gpu_work: {sec: 0, nsec: 1009911641}
+        gpu_work: {sec: 1, nsec: 9911641}
         gpu_span: {sec: 0, nsec: 184085249}
         period: {sec: 0, nsec: 995663533}
       - work: {sec: 0, nsec: 842630830}
         span: {sec: 0, nsec: 196089208}
-        gpu_work: {sec: 0, nsec: 1170900727}
+        gpu_work: {sec: 1, nsec: 170900727}
         gpu_span: {sec: 0, nsec: 184085249}
         period: {sec: 0, nsec: 995663533}
 
@@ -75394,7 +75394,7 @@
         period: {sec: 0, nsec: 871880811}
       - work: {sec: 0, nsec: 674981920}
         span: {sec: 0, nsec: 178726560}
-        gpu_work: {sec: 0, nsec: 1012241768}
+        gpu_work: {sec: 1, nsec: 12241768}
         gpu_span: {sec: 0, nsec: 180072739}
         period: {sec: 0, nsec: 871880811}
 
@@ -75701,12 +75701,12 @@
         period: {sec: 0, nsec: 956436349}
       - work: {sec: 0, nsec: 706458648}
         span: {sec: 0, nsec: 202136868}
-        gpu_work: {sec: 0, nsec: 1091031056}
+        gpu_work: {sec: 1, nsec: 91031056}
         gpu_span: {sec: 0, nsec: 199183100}
         period: {sec: 0, nsec: 956436349}
       - work: {sec: 0, nsec: 812614773}
         span: {sec: 0, nsec: 202136868}
-        gpu_work: {sec: 0, nsec: 1279380324}
+        gpu_work: {sec: 1, nsec: 279380324}
         gpu_span: {sec: 0, nsec: 199183100}
         period: {sec: 0, nsec: 956436349}
 
@@ -75940,7 +75940,7 @@
         period: {sec: 0, nsec: 911899727}
       - work: {sec: 0, nsec: 640750372}
         span: {sec: 0, nsec: 171182495}
-        gpu_work: {sec: 0, nsec: 1060765912}
+        gpu_work: {sec: 1, nsec: 60765912}
         gpu_span: {sec: 0, nsec: 183282415}
         period: {sec: 0, nsec: 911899727}
 
@@ -75987,12 +75987,12 @@
         period: {sec: 0, nsec: 994747236}
       - work: {sec: 0, nsec: 661133582}
         span: {sec: 0, nsec: 189015019}
-        gpu_work: {sec: 0, nsec: 1027297148}
+        gpu_work: {sec: 1, nsec: 27297148}
         gpu_span: {sec: 0, nsec: 188832048}
         period: {sec: 0, nsec: 994747236}
       - work: {sec: 0, nsec: 746913966}
         span: {sec: 0, nsec: 189015019}
-        gpu_work: {sec: 0, nsec: 1196743704}
+        gpu_work: {sec: 1, nsec: 196743704}
         gpu_span: {sec: 0, nsec: 188832048}
         period: {sec: 0, nsec: 994747236}
 
@@ -76174,7 +76174,7 @@
         period: {sec: 0, nsec: 821783102}
       - work: {sec: 0, nsec: 704568876}
         span: {sec: 0, nsec: 180755144}
-        gpu_work: {sec: 0, nsec: 1010754131}
+        gpu_work: {sec: 1, nsec: 10754131}
         gpu_span: {sec: 0, nsec: 180526535}
         period: {sec: 0, nsec: 821783102}
 
@@ -77058,7 +77058,7 @@
         period: {sec: 0, nsec: 870493104}
       - work: {sec: 0, nsec: 700444108}
         span: {sec: 0, nsec: 175667624}
-        gpu_work: {sec: 0, nsec: 1126331432}
+        gpu_work: {sec: 1, nsec: 126331432}
         gpu_span: {sec: 0, nsec: 171797419}
         period: {sec: 0, nsec: 870493104}
 
@@ -77365,12 +77365,12 @@
         period: {sec: 0, nsec: 983718205}
       - work: {sec: 0, nsec: 671310185}
         span: {sec: 0, nsec: 202427480}
-        gpu_work: {sec: 0, nsec: 1001222682}
+        gpu_work: {sec: 1, nsec: 1222682}
         gpu_span: {sec: 0, nsec: 196096190}
         period: {sec: 0, nsec: 983718205}
       - work: {sec: 0, nsec: 774864312}
         span: {sec: 0, nsec: 202427480}
-        gpu_work: {sec: 0, nsec: 1157063101}
+        gpu_work: {sec: 1, nsec: 157063101}
         gpu_span: {sec: 0, nsec: 196096190}
         period: {sec: 0, nsec: 983718205}
 
@@ -77500,7 +77500,7 @@
         period: {sec: 0, nsec: 840868232}
       - work: {sec: 0, nsec: 869852795}
         span: {sec: 0, nsec: 200894982}
-        gpu_work: {sec: 0, nsec: 1074734710}
+        gpu_work: {sec: 1, nsec: 74734710}
         gpu_span: {sec: 0, nsec: 189191999}
         period: {sec: 0, nsec: 840868232}
 
