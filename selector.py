@@ -51,11 +51,16 @@ def main():
     parser.add_argument('--iso_tasks', type=int, required=True, help='Number of isolation tasks')
     parser.add_argument('--comb_tasks', type=int, required=True, help='Number of combination tasks')
     parser.add_argument('--workload_tasks', type=int, required=True, help='Number of workload tasks')
-    
+    parser.add_argument('--seed_num', type=int, required=True, help='specifies seed offset: will be appended to file name')
+    parser.add_argument('--output', type=str, required=True, help='output file name')
+
     args = parser.parse_args()
     
     if not validate_arguments(args):
         return
+
+    #set python seed
+    random.seed(((args.seed_num + 1) * 2) * ((args.iso_tasks + 1) * 3) * ((args.comb_tasks + 1) * 5) * ((args.workload_tasks + 1) * 7) * ((args.num_tasks + 1) * 11))
 
     # Load all task files
     task_files = {
@@ -82,7 +87,7 @@ def main():
     modified_tasks = [modify_task_block(task) for task in selected_tasks]
 
     # Write the final configuration to a new file
-    output_file = 'selected_tasks.yaml'
+    output_file = str(args.seed_num) + "_" + args.output
     try:
         with open(output_file, 'w') as f:
             f.write(HEADER + '\n  ')
