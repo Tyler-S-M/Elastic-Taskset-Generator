@@ -6,13 +6,13 @@ import sys
 #normal 4 - 16
 
 # Global system CPU constraints
-MAX_ALLOWED_CPUS = 4
-MIN_ALLOWED_CPUS = 1
+MAX_ALLOWED_CPUS = 8
+MIN_ALLOWED_CPUS = 2
 
 MIN_PERIOD = 0.2
 
 UNSAFE_AMOUNT = 2
-MIN_UNSAFE_AVERAGE = 0.2
+MIN_UNSAFE_AVERAGE = 0.3
 
 MAX_ALLOWED_DIFFERENCE = 100
 
@@ -142,9 +142,13 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     #if we want tasks which will be unsafe for evaluation
     if combined_elasticity:
         if np.random.uniform(0, 1) > 0.5:
-            max_work_b = min_work_b
+            temp = min_work_b
+            min_work_b = max_work_b
+            max_work_b = temp
         else:
-            max_work_a = min_work_a
+            temp = min_work_a
+            min_work_a = max_work_a
+            max_work_a = temp
     
     # Generate elasticity value
     elasticity = np.random.uniform(0, 1)
@@ -196,6 +200,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
 
     #if we want tasks which will be unsafe for evaluation
     too_far = False
+    duplicate = False
     unsafe_modes = 0
     for mode in mode_info:
         for mode2 in mode_info:
@@ -203,6 +208,14 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
                 unsafe_modes += 1
             if np.abs(mode['cpus_a'] - mode['cpus_b']) > MAX_ALLOWED_DIFFERENCE:
                 too_far = True
+                break
+
+    #loop over all the modes and check if there are any duplicates
+    #use a range
+    for i in range(len(mode_info)):
+        for j in range(i+1, len(mode_info)):
+            if mode_info[i]['cpus_a'] == mode_info[j]['cpus_a'] and mode_info[i]['cpus_b'] == mode_info[j]['cpus_b']:
+                duplicate = True
                 break
     
     if combined_elasticity and (((unsafe_modes / (len(mode_info) * len(mode_info))) < (MIN_UNSAFE_AVERAGE)) or too_far):
