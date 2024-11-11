@@ -16,6 +16,8 @@ MIN_UNSAFE_AVERAGE = 0.3
 
 MAX_ALLOWED_DIFFERENCE = 100
 
+INVERTED_WORK_COMBINED_ELATICITY = False
+
 iso = False
 
 def generate_discrete_modes(min_val, max_val, mode_ratio):
@@ -142,14 +144,22 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     #if we want tasks which will be unsafe for evaluation
     if combined_elasticity:
         if np.random.uniform(0, 1) > 0.5:
-            temp = min_work_b
-            min_work_b = max_work_b
-            max_work_b = temp
+
+            if INVERTED_WORK_COMBINED_ELATICITY:
+                temp = min_work_b
+                min_work_b = max_work_b
+                max_work_b = temp
+            else:
+                max_work_b = min_work_b
         else:
-            temp = min_work_a
-            min_work_a = max_work_a
-            max_work_a = temp
-    
+
+            if INVERTED_WORK_COMBINED_ELATICITY:
+                temp = min_work_a
+                min_work_a = max_work_a
+                max_work_a = temp
+            else:
+                max_work_a = min_work_a
+        
     # Generate elasticity value
     elasticity = np.random.uniform(0, 1)
     
