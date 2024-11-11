@@ -67,16 +67,16 @@ def main():
         'iso': load_task_blocks('3000s/3000-isofunctional-elastic.yaml'),
         'comb': load_task_blocks('3000s/3000-comb-elastic.yaml'),
         'workload': load_task_blocks('3000s/3000-workload-elastic.yaml'),
-        'light': load_task_blocks('3000s/3000-light-elastic.yaml')
+        'light': load_task_blocks('3000s/3000-workload-elastic.yaml')
     }
 
     # Select tasks from each category
     selected_tasks = []
     
     # Add tasks from each category
+    selected_tasks.extend(select_random_tasks(task_files['workload'], args.workload_tasks))
     selected_tasks.extend(select_random_tasks(task_files['iso'], args.iso_tasks))
     selected_tasks.extend(select_random_tasks(task_files['comb'], args.comb_tasks))
-    selected_tasks.extend(select_random_tasks(task_files['workload'], args.workload_tasks))
     
     # Calculate and add light tasks
     specified_sum = args.iso_tasks + args.comb_tasks + args.workload_tasks
