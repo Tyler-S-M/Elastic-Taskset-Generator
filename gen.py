@@ -11,12 +11,12 @@ MIN_ALLOWED_CPUS = 2
 
 MIN_PERIOD = 0.2
 
-UNSAFE_AMOUNT = 2
-MIN_UNSAFE_AVERAGE = 0.3
+UNSAFE_AMOUNT = 1
+MIN_UNSAFE_AVERAGE = 0.2
 
 MAX_ALLOWED_DIFFERENCE = 100
 
-INVERTED_WORK_COMBINED_ELATICITY = False
+INVERTED_WORK_COMBINED_ELATICITY = True
 
 iso = False
 
@@ -145,7 +145,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     if combined_elasticity:
         if np.random.uniform(0, 1) > 0.5:
 
-            if INVERTED_WORK_COMBINED_ELATICITY:
+            if INVERTED_WORK_COMBINED_ELATICITY and np.random.uniform(0, 1) > 0.5:
                 temp = min_work_b
                 min_work_b = max_work_b
                 max_work_b = temp
@@ -153,7 +153,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
                 max_work_b = min_work_b
         else:
 
-            if INVERTED_WORK_COMBINED_ELATICITY:
+            if INVERTED_WORK_COMBINED_ELATICITY and np.random.uniform(0, 1) > 0.5:
                 temp = min_work_a
                 min_work_a = max_work_a
                 max_work_a = temp
@@ -168,7 +168,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     max_cpus_a = calculate_cpus(max_work_a, span_a, period_low if combined_elasticity else period, skewness_ratio)
     min_cpus_b = calculate_cpus(min_work_b, span_b, period, skewness_ratio)
     max_cpus_b = calculate_cpus(max_work_b, span_b, period_low if combined_elasticity else period, skewness_ratio)
-    
+
     # Validate all CPU calculations and system constraints
     if not all([is_valid_cpus(min_cpus_a, min_cpus_b, skewness_ratio),
                 is_valid_cpus(max_cpus_a, max_cpus_b, skewness_ratio)]):
@@ -191,6 +191,9 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
 
         cpus_a = calculate_cpus(mode_a, span_a, period_current, skewness_ratio)
         cpus_b = calculate_cpus(mode_b, span_b, period_current, skewness_ratio)
+
+        if cpus_a > MAX_ALLOWED_CPUS or cpus_b > MAX_ALLOWED_CPUS or cpus_a < MIN_ALLOWED_CPUS or cpus_b < MIN_ALLOWED_CPUS:
+            continue
             
         mode_info.append({
             'period': period_current,
@@ -225,8 +228,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
     for i in range(len(mode_info)):
         for j in range(i+1, len(mode_info)):
             if mode_info[i]['cpus_a'] == mode_info[j]['cpus_a'] and mode_info[i]['cpus_b'] == mode_info[j]['cpus_b']:
-                duplicate = True
-                break
+                return None
     
     if combined_elasticity and (((unsafe_modes / (len(mode_info) * len(mode_info))) < (MIN_UNSAFE_AVERAGE)) or too_far):
         return None

@@ -87,7 +87,7 @@ def main():
     modified_tasks = [modify_task_block(task) for task in selected_tasks]
 
     # Write the final configuration to a new file
-    output_file = str(args.seed_num) + "_" + args.output
+    output_file = args.output
     try:
         with open(output_file, 'w') as f:
             f.write(HEADER + '\n  ')
