@@ -23,7 +23,11 @@ iso = False
 def generate_discrete_modes(min_val, max_val, mode_ratio):
 
     num_modes = round(1 / mode_ratio)
-    step = (max_val - min_val) / (num_modes - 1)
+    step = np.abs(max_val - min_val) / (num_modes - 1)
+
+    if min_val > max_val:
+        return [max_val + i * step for i in range(num_modes)]
+
     return [min_val + i * step for i in range(num_modes)]
 
 def generate_discrete_periods(min_val, max_val, mode_ratio):
