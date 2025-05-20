@@ -18,6 +18,8 @@ MAX_ALLOWED_DIFFERENCE = 100
 
 INVERTED_WORK_COMBINED_ELATICITY = True
 
+NUMBER_OF_PROCESSORS = 64
+
 iso = False
 
 def generate_discrete_modes(min_val, max_val, mode_ratio):
@@ -121,7 +123,7 @@ def generate_task(mode_ratio=0.25, skewness_ratio=None, combined_elasticity=Fals
             segment_type = 'b'
             
         # Generate number of strands for min and max work
-        m = len(segments) + 1  # Current number of segments
+        m = NUMBER_OF_PROCESSORS
         mean_strands = 1 + math.sqrt(m)/3
         min_strands = max(1, round(np.random.lognormal(mean=np.log(mean_strands), sigma=0.3)))
         max_strands = max(min_strands + 1, round(np.random.lognormal(mean=np.log(mean_strands * 1.5), sigma=0.3)))
@@ -422,22 +424,8 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
     
     print(f"\nGenerating {total_tasks} tasks ({iso_tasks} isofunctional)")
     
-    # Generate isofunctional tasks first
-    for i in range(iso_tasks):
-        while True:
-            
-            task = generate_task(mode_ratio, skewness_ratio=1.0)
-            if task is None:
-                continue
-            
-            else:
-                print(f"\n=== Isofunctional Task {i+1} ===")
-                print_detailed_task_info(task)
-                tasks.append(task)
-                break
-    
     # Generate regular tasks
-    for i in range(total_tasks - iso_tasks):
+    for i in range(total_tasks):
         while True:
             
             # Generate with random skewness
@@ -445,7 +433,7 @@ def generate_task_set_with_iso(total_tasks, iso_tasks, mode_ratio=0.25, combined
             if combined_elasticity and i < count:
                 combined = True
 
-            task = generate_task(mode_ratio, 0.5, combined)
+            task = generate_task(mode_ratio, None, combined)
 
             if task is None:
                 continue
